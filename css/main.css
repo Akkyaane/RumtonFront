@@ -2,9 +2,11 @@
 
 :root {
     --size-1440: 1440px;
-    --color-14bbab: #14bbab;
-    --color-fefefe: #fefefe;
-    --color-f92a82: #f92a82;
+    --color-1accef: #1accef;
+    --color-f6f6f6: #f6f6f6;
+    --color-7a00f5: #7a00f5;
+    --color-1e003d: #1e003d;
+    --color-cc9cff: #cc9cff;
 }
 
 .outfit-header {
@@ -30,26 +32,21 @@
     content: '';
     position: absolute;
     left: 0;
-    bottom: -2px;
+    bottom: -0.01em;
     width: 100%;
-    height: 2px;
-    background-color: var(--color-14bbab);
+    height: 10%;
+    background-color: var(--color-1accef);
 }
 
 em {
-    color: var(--color-f92a82);
+    color: var(--color-7a00f5);
     font-style: normal;
     font-weight: 500;
 }
   
 
-/* * {
+* {
     border: solid 0.1px black;
-} */
-
-.header-img {
-    width: 150px;
-    height: 100px;
 }
 
 .home {
@@ -68,7 +65,7 @@ em {
     right: 0%;
     height: 100%;
     width: 500px;
-    background-color: var(--color-fefefe);
+    background-color: var(--color-f6f6f6);
     z-index: 1000;
 
     .close-btn {
@@ -77,6 +74,6 @@ em {
         right: 20px;
         font-size: 60px;
         cursor: pointer;
-        color: var(--color-14bbab);
+        color: var(--color-1accef);
     }
 }
