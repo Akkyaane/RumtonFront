@@ -45,9 +45,9 @@ em {
 }
   
 
-* {
+/* * {
     border: solid 0.1px black;
-}
+} */
 
 .home {
     background-image: url(../content/picture-1.jpg);
