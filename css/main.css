@@ -2,20 +2,23 @@
 
 :root {
     --size-1440: 1440px;
-    --color-1accef: #1accef;
-    --color-f6f6f6: #f6f6f6;
-    --color-7a00f5: #7a00f5;
-    --color-1e003d: #1e003d;
+    --color-primary: #fbfdff;
+    --color-secondary: #7ccfff;
+    --color-f6f6f6: #ffffff ;
+    --color-7a00f5: #7A00F5;
+    --color-1e003d: #3D007A;   
     --color-cc9cff: #cc9cff;
-}
+} 
 
+/* fcfdff */
+  
 .outfit-header {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
     font-weight: 600;
     font-style: normal;
 }
-
+ 
 .outfit-body {
     font-family: "Outfit", sans-serif;
     font-optical-sizing: auto;
@@ -35,11 +38,11 @@
     bottom: -0.01em;
     width: 100%;
     height: 10%;
-    background-color: var(--color-1accef);
+    background-color: var(--color-secondary);
 }
 
 em {
-    color: var(--color-7a00f5);
+    color: var(--color-1e003d);
     font-style: normal;
     font-weight: 500;
 }
