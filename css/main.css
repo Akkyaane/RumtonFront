@@ -6,7 +6,7 @@
     --color-secondary: #2C0057;   
     --color-tertiary: #86DFFF;
     --color-quaternary: #EFF7FF;
-    --color-quinary: #c9c9c9;
+    --color-quinary: #CC9CFF;
 } 
   
 .outfit-header {
@@ -39,9 +39,9 @@
 }
 
 em {
-    color: var(--color-1e003d);
     font-style: normal;
     font-weight: 500;
+    color: var(--color-secondary)
 }
   
 
@@ -53,6 +53,11 @@ em {
     background-image: url(../content/picture-1.jpg);
     background-size: cover;
     background-position: bottom;
+}
+
+
+body {
+    background-color: #fffbf9;
 }
 
 .hide {
@@ -77,3 +82,9 @@ em {
         color: var(--color-1accef);
     }
 }
+
+.shadow {
+    box-shadow: rgba(134, 223, 255, 1) 7.5px 7.5px;
+}
+
+
