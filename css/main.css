@@ -7,6 +7,7 @@
     --color-tertiary: #86DFFF;
     --color-quaternary: #EFF7FF;
     --color-quinary: #CC9CFF;
+    --color-six: #060202;
 } 
   
 .outfit-header {
@@ -57,7 +58,7 @@ em {
 
 
 body {
-    background-color: #fffbf9;
+    background-color: #fcfaff;
 }
 
 .hide {
