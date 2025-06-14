@@ -20,7 +20,7 @@
         />
       </a>
       <nav class="flex items-center">
-        <ul class="flex gap-8">
+        <ul class="flex gap-4">
           <li><a class="link" href="./index.html">Accueil</a></li>
           <li><a class="link" href="./runs.html">Toutes les courses</a></li>
           <li>
@@ -32,55 +32,49 @@
 
     <main class="flex flex-1 gap-6">
       <nav
-        class="bg-(--color-quaternary) flex h-[400px] justify-center px-8 py-12 rounded-sm shadow"
+        class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
       >
-        <ul class="flex flex-col justify-between">
-          <li>
-            <ul class="flex flex-col gap-8">
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt="Icône de la section 'Mon tableau de bord'"
-                  class="size-[20px]"
-                  src="../../content/icons/board-icon.svg"
-                />
-                <a class="link text-lg" href="./dashboard.html"
-                  >Mon tableau de bord</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt="Icône de la section 'Mes participations'"
-                  class="size-[20px]"
-                  src="../../content/icons/runner-icon.svg"
-                />
-                <a class="link text-lg" href="./my-participations.html"
-                  >Mes participations</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt="Icône de la section 'Mes courses'"
-                  class="size-[20px]"
-                  src="../../content/icons/flag-icon.svg"
-                />
-                <a
-                  class="link text-lg"
-                  href="../specific/host/host-my-runs.html"
-                  >Mes courses</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt="Icône de la section 'Mes informations'"
-                  class="size-[20px]"
-                  src="../../content/icons/user-icon.svg"
-                />
-                <a class="link text-lg" href="./profile.html"
-                  >Mes informations</a
-                >
-              </li>
-            </ul>
+        <ul class="flex flex-col gap-8">
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mon tableau de bord'"
+              class="size-[20px]"
+              src="../../content/icons/board-icon.svg"
+            />
+            <a class="link text-lg" href="./dashboard.html"
+              >Mon tableau de bord</a
+            >
           </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes participations'"
+              class="size-[20px]"
+              src="../../content/icons/runner-icon.svg"
+            />
+            <a class="link text-lg" href="./my-participations.html"
+              >Mes participations</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes courses'"
+              class="size-[20px]"
+              src="../../content/icons/flag-icon.svg"
+            />
+            <a class="link text-lg" href="../specific/host/host-my-runs.html"
+              >Mes courses</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes informations'"
+              class="size-[20px]"
+              src="../../content/icons/user-icon.svg"
+            />
+            <a class="link text-lg" href="./profile.html">Mes informations</a>
+          </li>
+        </ul>
+        <ul>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Se déconnecter'"
@@ -914,6 +908,11 @@
               </li>
               <li>
                 <a class="link" href="./runs.html">Toutes les courses</a>
+              </li>
+              <li>
+                <a class="link" href="./profile.html#host"
+                  >Devenir organisateur</a
+                >
               </li>
             </ul>
           </nav>

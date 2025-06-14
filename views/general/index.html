@@ -5,279 +5,304 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rumton - Accueil</title>
     <link href="../../dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link href="../../css/main.css" rel="stylesheet" />
   </head>
 
-  <body class="outfit-body w-(--size-1440) m-auto text-(--color-secondary)">
-    <header class="flex justify-between items-center py-2">
+  <body
+    class="m-auto min-h-screen outfit-body text-(--color-secondary) w-(--size-1440)"
+  >
+    <header class="flex items-center justify-between py-4">
       <a href="./index.html"
         ><img
-          src="../../../content/logos/logo.svg"
           alt="Logo de l'application Rumton"
           class="w-[100px]"
+          src="../../../content/logos/logo.svg"
       /></a>
       <nav class="flex items-center gap-8">
         <ul class="flex gap-4">
-          <li><a href="#home" class="link">Accueil</a></li>
-          <li><a href="#concept" class="link">Concept</a></li>
-          <li><a href="#calendar" class="link">Agenda</a></li>
-          <li><a href="#volunteer" class="link">Devenir bénévole</a></li>
+          <li><a class="link" href="#home">Accueil</a></li>
+          <li><a class="link" href="#concept">Concept</a></li>
+          <li><a class="link" href="#calendar">Agenda</a></li>
+          <li><a class="link" href="#volunteer">Devenir bénévole</a></li>
         </ul>
         <ul class="flex gap-4">
           <li>
             <a
-              id="sign-in-btn"
-              class="bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
               href="./dashboard.html"
+              id="sign-in-btn"
               >Se connecter</a
             >
           </li>
           <li>
             <a
+              class="bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
               id="sign-up-btn"
-              class="bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
               >S'inscrire</a
             >
           </li>
         </ul>
-        <div id="popup" class="hide popup shadow-xl">
-          <span class="close-btn" id="close-btn">&times;</span>
-          <div
-            id="sign-in"
-            class="hide flex flex-col justify-center h-full p-8 gap-8"
-          >
+      </nav>
+      <div class="hide popup shadow-xl" id="popup">
+        <span class="close-btn" id="close-btn">&times;</span>
+        <div
+          class="bg-(--color-senary) flex flex-col gap-8 hide h-full items-center justify-center px-8"
+          id="sign-in"
+        >
+          <div class="flex flex-col gap-2 items-center">
+            <h2 class="outfit-header text-3xl text-(--color-primary)">
+              Connexion
+            </h2>
+            <p>Veuillez entrez vos informations pour vous connecter.</p>
+          </div>
+          <form action="" class="flex flex-col gap-4 w-full" method="post">
             <div class="flex flex-col gap-2">
-              <h2 class="outfit-header text-3xl text-(--color-primary)">
-                Connexion
-              </h2>
-              <p>Veuillez entrez vos informations pour vous connecter.</p>
-            </div>
-            <form
-              action="controller"
-              method="post"
-              class="flex flex-col gap-2 w-full"
-            >
               <label for="email">E-mail*</label>
               <input
-                type="email"
-                name="email"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="email"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="email"
                 placeholder="john.doe@exemple.com"
                 required
+                type="email"
               />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="password">Mot de passe*</label>
               <input
-                type="password"
-                name="password"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="password"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="password"
                 required
+                type="password"
               />
-              <a id="forgotten-password-btn" class="link w-fit"
-                >Mot de passe oublié ?</a
-              >
-              <input
-                type="submit"
-                name="send"
-                id="send"
-                value="Envoyer"
-                class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
-              />
-            </form>
-          </div>
-          <div
-            id="forgotten-password"
-            class="hide flex flex-col justify-center h-full p-8 gap-8"
-          >
-            <div class="flex flex-col gap-2">
-              <h2 class="outfit-header text-3xl text-(--color-primary)">
-                Mot de passe oublié ?
-              </h2>
-              <p>
-                Veuillez entrez votre e-mail. Un lien vous sera envoyé afin de
-                réinitialiser votre mot de passe.
-              </p>
             </div>
-            <form
-              action="controller"
-              method="post"
-              class="flex flex-col gap-2 w-full"
+            <a class="link w-fit" id="forgotten-password-btn"
+              >Mot de passe oublié ?</a
             >
+            <input
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              id="send"
+              name="send"
+              type="submit"
+              value="Envoyer"
+            />
+          </form>
+        </div>
+        <div
+          class="bg-(--color-senary) flex flex-col gap-8 hide h-full items-center justify-center px-8"
+          id="forgotten-password"
+        >
+          <div class="flex flex-col gap-2 items-center">
+            <h2 class="outfit-header text-3xl text-(--color-primary)">
+              Mot de passe oublié ?
+            </h2>
+            <p>
+              Veuillez entrez votre e-mail. Un lien vous sera envoyé afin de
+              réinitialiser votre mot de passe.
+            </p>
+          </div>
+          <form action="" class="flex flex-col gap-4 w-full" method="post">
+            <div class="flex flex-col gap-2">
               <label for="email">E-mail*</label>
               <input
-                type="email"
-                name="email"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="email"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="email"
                 placeholder="john.doe@exemple.com"
                 required
+                type="email"
               />
-              <input
-                type="submit"
-                name="send"
-                id="send"
-                value="Envoyer"
-                class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
-              />
-            </form>
-          </div>
-          <div
-            id="new-password"
-            class="hide flex flex-col justify-center h-full p-8 gap-8"
-          >
-            <div class="flex flex-col gap-2">
-              <h2 class="outfit-header text-3xl text-(--color-primary)">
-                Réinitialisation du mot de passe
-              </h2>
-              <p>Veuillez définir un nouveau mot de passe.</p>
             </div>
-            <form
-              action="controller"
-              method="post"
-              class="flex flex-col gap-2 w-full"
-            >
+            <input
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              id="send"
+              name="send"
+              type="submit"
+              value="Envoyer"
+            />
+          </form>
+        </div>
+        <div
+          class="bg-(--color-senary) flex flex-col gap-8 hide h-full items-center justify-center px-8"
+          id="new-password"
+        >
+          <div class="flex flex-col gap-2 items-center">
+            <h2 class="outfit-header text-3xl text-(--color-primary)">
+              Réinitialisation du mot de passe
+            </h2>
+            <p>Veuillez définir un nouveau mot de passe.</p>
+          </div>
+          <form action="" class="flex flex-col gap-4 w-full" method="post">
+            <div class="flex flex-col gap-2">
               <label for="password">Mot de passe*</label>
               <input
-                type="password"
-                name="password"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="password"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                required
-              />
-              <label for="password">Confirmation du mot de passe*</label>
-              <input
-                type="password"
                 name="password"
-                id="password"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 required
+                type="password"
               />
-              <input
-                type="submit"
-                name="send"
-                id="send"
-                value="Envoyer"
-                class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
-              />
-            </form>
-          </div>
-          <div
-            id="sign-up"
-            class="hide flex flex-col justify-center h-full p-8 gap-8"
-          >
-            <div class="flex flex-col gap-2">
-              <h2 class="outfit-header text-3xl text-(--color-primary)">
-                Inscription
-              </h2>
-              <p>Veuillez entrez vos informations pour vous inscrire.</p>
             </div>
-            <form
-              action="controller"
-              method="post"
-              class="flex flex-col gap-2 w-full"
-            >
+            <div class="flex flex-col gap-2">
+              <label for="password-check">Confirmation du mot de passe*</label>
+              <input
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                id="password-check"
+                name="password-check"
+                required
+                type="password"
+              />
+            </div>
+            <input
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              id="send"
+              name="send"
+              type="submit"
+              value="Envoyer"
+            />
+          </form>
+        </div>
+        <div
+          class="bg-(--color-senary) flex flex-col gap-8 hide h-full items-center justify-center px-8"
+          id="sign-up"
+        >
+          <div class="flex flex-col gap-2 items-center">
+            <h2 class="outfit-header text-3xl text-(--color-primary)">
+              Inscription
+            </h2>
+            <p>Veuillez entrez vos informations pour vous inscrire.</p>
+          </div>
+          <form action="" class="flex flex-col gap-4 w-full" method="post">
+            <div class="flex flex-col gap-2">
               <label for="nickname">Pseudonyme*</label>
               <input
-                type="text"
-                name="nickname"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="nickname"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="nickname"
                 placeholder="john00"
                 required
+                type="text"
               />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="firstname">Prénom*</label>
               <input
-                type="text"
-                name="firstname"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="firstname"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="firstname"
                 placeholder="John"
                 required
+                type="text"
               />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="lastname">Nom*</label>
               <input
-                type="text"
-                name="lastname"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="lastname"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="lastname"
                 placeholder="Doe"
                 required
+                type="text"
               />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="sex">Sexe*</label>
               <select
+                class="border border-(--color-quinary) p-2 rounded-sm focus:outline-2 focus:outline-(--color-primary)"
                 id="sex"
                 name="sex"
-                class="border p-2 border-(--color-quinary) rounded-sm focus:outline-2 focus:outline-(--color-primary)"
                 required
               >
-                <option value="" selected disabled hidden>
+                <option disabled hidden selected value="">
                   Sélectionner une valeur
                 </option>
                 <option value="man">Homme</option>
                 <option value="woman">Femme</option>
                 <option value="undefined">Indeterminé</option>
               </select>
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="birthdate">Date de naissance*</label>
               <input
-                type="date"
-                name="birthdate"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="birthdate"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="birthdate"
                 placeholder="Doe"
                 required
+                type="date"
               />
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="zip">Code postal*</label>
+              <input
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                id="zip"
+                name="zip"
+                placeholder="69007"
+                required
+                type="number"
+              />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="email">E-mail*</label>
               <input
-                type="email"
-                name="email"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="email"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="email"
                 placeholder="john.doe@exemple.com"
                 required
+                type="email"
               />
-              <label for="email">Confirmation de l'e-mail*</label>
+            </div>
+            <div class="flex flex-col gap-2">
+              <label for="email-check">Confirmation de l'e-mail*</label>
               <input
-                type="email"
-                name="email"
-                id="email"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                id="email-check"
+                name="email-check"
                 placeholder="john.doe@exemple.com"
                 required
+                type="email"
               />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="password">Mot de passe*</label>
               <input
-                type="password"
-                name="password"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="password"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="password"
                 required
+                type="password"
               />
+            </div>
+            <div class="flex flex-col gap-2">
               <label for="password-check">Confirmation du mot de passe*</label>
               <input
-                type="password-check"
-                name="password-check"
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="password-check"
-                class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="password-check"
                 required
+                type="password"
               />
-              <input
-                type="submit"
-                name="send"
-                id="send"
-                value="Envoyer"
-                class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
-              />
-            </form>
-          </div>
+            </div>
+            <input
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              id="send"
+              name="send"
+              type="submit"
+              value="Envoyer"
+            />
+          </form>
         </div>
-      </nav>
+      </div>
     </header>
 
     <main class="flex flex-col gap-8">
       <section
+        class="home flex flex-col items-center gap-8 py-32 rounded-sm shadow text-(--color-septenary)"
         id="home"
-        class="home flex flex-col items-center gap-8 py-32 text-[#ffffff]"
       >
         <p class="text-lg">
           Venez vivre l'expérience unique de la Color Run dans votre ville.
@@ -292,26 +317,25 @@
         </p>
         <div class="flex gap-4">
           <a
-            class="bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-2 border-(--color-primary) hover:border-2 hover:border-[#ffffff] hover:text-[#ffffff]"
+            class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:border-2 hover:border-(--color-septenary) hover:text-(--color-septenary)"
             href="./runs.html"
             >Découvrir les courses</a
           >
           <a
-            class="bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-2 border-(--color-primary) hover:border-2 hover:border-[#ffffff] hover:text-[#ffffff]"
+            class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:border-2 hover:border-(--color-septenary) hover:text-(--color-septenary)"
             >Inscrivez-vous maintenant</a
           >
         </div>
       </section>
-
-      <section id="concept" class="flex flex-col items-center gap-10 py-10">
+      <section class="flex flex-col items-center gap-10 py-10" id="concept">
         <h2 class="outfit-header text-2xl text-(--color-primary)">
           Découvrez le concept de la Color Run
         </h2>
         <div class="flex items-center gap-10">
           <img
+            alt="Photo d'illustration de la Color Run"
+            class="rounded-sm shadow w-[500px]"
             src="../../../content/pictures/picture-2.jpg"
-            alt=""
-            class="w-[500px] rounded-sm border-2 border-(--color-tertiary)"
           />
           <div class="flex flex-col gap-4 text-lg">
             <p class="w-xl">
@@ -328,7 +352,7 @@
             <h3 class="outfit-header text-xl text-(--color-primary)">
               Pourquoi participer ?
             </h3>
-            <ul class="flex flex-col gap-1">
+            <ul class="flex flex-col gap-2">
               <li>Une ambiance <em>fun</em> et <em>conviviale</em>.</li>
               <li>Aucune pression, juste du <em>plaisir</em>.</li>
               <li><em>Accessible</em> à tous les âges et niveaux.</li>
@@ -336,8 +360,7 @@
           </div>
         </div>
       </section>
-
-      <section id="calendar" class="flex flex-col items-center gap-10 py-10">
+      <section class="flex flex-col items-center gap-10 py-10" id="calendar">
         <h2 class="outfit-header text-2xl text-(--color-primary)">
           Nos prochaines étapes colorées
         </h2>
@@ -345,59 +368,58 @@
           La Color Run voyage dans toute la France ! Voici les villes où nous
           poserons nos valises prochainement :
         </p>
-        <div class="flex gap-8">
-          <div class="flex flex-col items-left gap-2">
+        <div class="flex gap-10">
+          <div class="flex flex-col gap-2 items-left">
             <img
+              alt="Photo de la ville de Lyon"
+              class="rounded-sm shadow size-[300px]"
               src="../../content/pictures/picture-3.jpg"
-              alt=""
-              class="size-[300px] rounded-sm border-2 border-(--color-tertiary)"
             />
             <p class="text-lg">Lyon : Dim. 12 mai 2025</p>
             <a
-              href="#"
-              class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              href="../general/runs.html"
               >Participer</a
             >
           </div>
-          <div class="flex flex-col items-left gap-2">
+          <div class="flex flex-col gap-2 items-left">
             <img
+              alt="Photo de la ville de Bordeaux"
+              class="rounded-sm shadow size-[300px]"
               src="../../content/pictures/picture-4.jpg"
-              alt=""
-              class="size-[300px] rounded-sm border-2 border-(--color-tertiary)"
             />
             <p class="text-lg">Bordeaux : Sam. 8 juin 2025</p>
             <a
-              href="#"
-              class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              href="../general/runs.html"
               >Participer</a
             >
           </div>
-          <div class="flex flex-col items-left gap-2">
+          <div class="flex flex-col gap-2 items-left">
             <img
+              alt="Photo de la ville de Paris"
+              class="rounded-sm shadow size-[300px]"
               src="../../content/pictures/picture-5.jpg"
-              alt=""
-              class="size-[300px] rounded-sm border-2 border-(--color-tertiary)"
             />
             <p class="text-lg">Paris : Dim. 22 sept. 2025</p>
             <a
-              href="#"
-              class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              href="../general/runs.html"
               >Participer</a
             >
           </div>
         </div>
-        <a href="runs.html" class="link text-(--color-primary)"
+        <a class="link text-(--color-primary)" href="../general/runs.html"
           >Voir plus d'événements</a
         >
       </section>
-
-      <section id="join" class="flex justify-center gap-10 py-10">
+      <section class="flex justify-center gap-10 py-10" id="join">
         <img
-          src="../../content/pictures/picture-6.jpg"
           alt=""
-          class="w-[500px] rounded-sm border-2 border-(--color-tertiary)"
+          class="rounded-sm shadow w-[500px]"
+          src="../../content/pictures/picture-6.jpg"
         />
-        <div class="flex flex-col gap-3 text-lg w-3xl h-px">
+        <div class="flex flex-col gap-3 h-px text-lg w-3xl">
           <h2 class="outfit-header text-2xl text-(--color-primary)">
             Rejoignez l'aventure !
           </h2>
@@ -422,14 +444,13 @@
             partagent cette aventure incroyable !
           </p>
           <a
-            class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+            class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
             >S'inscrire maintenant</a
           >
         </div>
       </section>
-
-      <section id="volunteer" class="flex justify-center gap-6 p-6">
-        <div class="flex flex-col gap-3 text-lg w-3xl h-px">
+      <section class="flex justify-center gap-10 py-10" id="volunteer">
+        <div class="flex flex-col gap-3 h-px text-lg w-3xl">
           <h2 class="outfit-header text-2xl text-(--color-primary)">
             Devenez un héros de la Color Run
           </h2>
@@ -451,81 +472,87 @@
             précieuse !
           </p>
           <a
-            class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+            class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+            href="#"
             >Rejoindre l'équipe bénévole</a
           >
         </div>
         <img
-          src="../../content/pictures/picture-7.jpg"
           alt=""
-          class="w-[500px] rounded-sm border-2 border-(--color-tertiary)"
+          class="rounded-sm shadow w-[500px]"
+          src="../../content/pictures/picture-7.jpg"
         />
       </section>
     </main>
 
-    <footer class="flex flex-col items-center gap-8 p-6">
-      <div class="w-full flex justify-between items-center pt-8">
-        <img src="../../content/logos/logo.svg" alt="" class="w-[100px]" />
-        <div class="flex gap-8">
-          <nav class="flex flex-col gap-3">
-            <h3>Liens utiles</h3>
-            <ul class="flex flex-col gap-1">
-              <li><a href="#" class="link">A propos</a></li>
-              <li><a href="#" class="link">FAQ</a></li>
-              <li><a href="#" class="link">Nous contacter</a></li>
-              <li><a href="#" class="link">Mentions légales</a></li>
-            </ul>
-          </nav>
-          <div class="flex flex-col gap-2">
-            <a href=""
-              ><img
-                src="../../content/logos/instagram-logo.svg"
-                alt=""
-                class="size-[30px]"
-            /></a>
-            <a href=""
-              ><img
-                src="../../content/logos/facebook-logo.svg"
-                alt=""
-                class="size-[30px]"
-            /></a>
-            <a href=""
-              ><img
-                src="../../content/logos/x-logo.svg"
-                alt=""
-                class="size-[30px]"
-            /></a>
-            <a href=""
-              ><img
-                src="../../content/logos/youtube-logo.svg"
-                alt=""
-                class="size-[30px]"
-            /></a>
-          </div>
-          <div class="flex flex-col gap-3 w-md">
-            <form action="#" method="post" class="flex flex-col gap-2">
-              <label for="email"
-                >Inscrivez-vous à notre newsletter pour recevoir les dernières
-                actualités et offres exclusives</label
-              >
-              <div class="flex flex-col gap-2">
-                <input
-                  type="email"
-                  name="email"
-                  placeholder="john.doe@example.com"
-                  class="border p-2 border-(--color-quinary) rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+    <footer class="flex flex-col items-center py-10">
+      <div class="flex w-full items-center justify-between">
+        <div class="flex flex-col gap-2">
+          <img alt="" class="w-[100px]" src="../../content/logos/logo.svg" />
+          <p>2025 © Rumton</p>
+        </div>
+        <div class="flex gap-8 items-center">
+          <div class="flex flex-col gap-4">
+            <nav>
+              <ul class="flex flex-col gap-2">
+                <li><a class="link" href="#home">Accueil</a></li>
+                <li><a class="link" href="#concept">Concept</a></li>
+                <li><a class="link" href="#calendar">Agenda</a></li>
+                <li><a class="link" href="#volunteer">Devenir bénévole</a></li>
+              </ul>
+            </nav>
+            <div class="flex gap-2">
+              <a href="https://www.instagram.com/">
+                <img
+                  alt="Logo de l'application Instagram"
+                  class="size-[25px]"
+                  src="../../../content/logos/instagram-logo.svg"
                 />
-                <input
-                  type="submit"
-                  value="S'inscrire"
-                  class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              </a>
+              <a href="https://x.com/">
+                <img
+                  alt="Logo de l'application X"
+                  class="size-[25px]"
+                  src="../../../content/logos/x-logo.svg"
                 />
-              </div>
-            </form>
+              </a>
+              <a href="https://www.facebook.com/?locale=fr_FR">
+                <img
+                  alt="Logo de l'application Facebook"
+                  class="size-[25px]"
+                  src="../../../content/logos/facebook-logo.svg"
+                />
+              </a>
+              <a href="https://www.youtube.com/">
+                <img
+                  alt="Logo de l'application YouTube"
+                  class="size-[25px]"
+                  src="../../../content/logos/youtube-logo.svg"
+                />
+              </a>
+            </div>
           </div>
+          <form action="#" class="flex flex-col gap-2 w-sm" method="post">
+            <label for="email"
+              >Inscrivez-vous à notre newsletter pour recevoir les dernières
+              actualités et offres exclusives</label
+            >
+            <div class="flex flex-col gap-2">
+              <input
+                class="border border-(--color-quinary) p-2 rounded-sm focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                name="email"
+                placeholder="john.doe@example.com"
+                type="email"
+              />
+              <input
+                class="w-fit bg-(--color-primary) border-1 border-(--color-septenary) cursor-pointer px-3 py-2 rounded-sm text-(--color-septenary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+                type="submit"
+                value="S'inscrire"
+              />
+            </div>
+          </form>
         </div>
       </div>
-      <p>2025 © Color Run. Tous droits réservés.</p>
     </footer>
     <script src="../../js/main.js"></script>
   </body>

@@ -2,10 +2,12 @@
 
 :root {
   --color-primary: #7a00f5;
-  --color-quaternary: #eff7ff;
-  --color-quinary: #cc9cff;
   --color-secondary: #2c0057;
   --color-tertiary: #86dfff;
+  --color-quaternary: #eff7ff;
+  --color-quinary: #cc9cff;
+  --color-senary: #fcfaff;
+  --color-septenary: #ffffff;
 
   --size-1440: 1440px;
 }
@@ -67,7 +69,7 @@
 }
 
 body {
-  background-color: #fcfaff;
+  background-color: var(--color-senary);
 }
 
 em {
