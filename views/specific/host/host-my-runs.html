@@ -1,0 +1,899 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumton - Mes participations</title>
+    <link href="../../../dist/output.css" rel="stylesheet" />
+    <link rel="stylesheet" href="../../../css/main.css" />
+  </head>
+
+  <body
+    class="outfit-body w-(--size-1440) m-auto flex flex-col min-h-screen text-(--color-secondary)"
+  >
+    <header class="flex items-center justify-between py-4">
+      <a href="../../general/index.html">
+        <img
+          alt="Logo de l'application Rumton"
+          class="w-[100px]"
+          src="../../../content/logos/logo.svg"
+        />
+      </a>
+      <nav class="flex items-center">
+        <ul class="flex gap-8">
+          <li><a class="link" href="../../general/index.html">Accueil</a></li>
+          <li>
+            <a class="link" href="../../general/runs.html"
+              >Toutes les courses</a
+            >
+          </li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex-1">
+      <div class="flex gap-6">
+        <nav
+          class="bg-(--color-quaternary) flex h-[400px] justify-center px-8 py-12 rounded-sm shadow w-[275px]"
+        >
+          <ul class="flex flex-col justify-between">
+            <div class="flex flex-col gap-8">
+              <li class="flex items-center gap-2 text-(--color-secondary)">
+                <img
+                  alt=""
+                  class="size-[20px]"
+                  src="../../../content/icons/board-icon.svg"
+                />
+                <a class="link text-lg" href="../../general/dashboard.html"
+                  >Mon tableau de bord</a
+                >
+              </li>
+              <li class="flex items-center gap-2 text-(--color-secondary)">
+                <img
+                  alt=""
+                  class="size-[20px]"
+                  src="../../../content/icons/runner-icon.svg"
+                />
+                <a
+                  class="link text-lg"
+                  href="../../general/my-participations.html"
+                  >Mes participations</a
+                >
+              </li>
+              <li class="flex items-center gap-2 text-(--color-secondary)">
+                <img
+                  alt=""
+                  class="size-[20px]"
+                  src="../../../content/icons/flag-icon.svg"
+                />
+                <a class="link text-lg" href="./host-my-runs.html"
+                  >Mes courses</a
+                >
+              </li>
+              <li class="flex items-center gap-2 text-(--color-secondary)">
+                <img
+                  alt=""
+                  class="size-[20px]"
+                  src="../../../content/icons/user-icon.svg"
+                />
+                <a class="link text-lg" href="../../general/profile.html"
+                  >Mes informations</a
+                >
+              </li>
+            </div>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt=""
+                class="size-[20px]"
+                src="../../../content/icons/logout-icon.svg"
+              />
+              <a class="link text-lg" href="#">Se déconnecter</a>
+            </li>
+          </ul>
+        </nav>
+
+        <section
+          class="flex flex-col rounded-sm p-12 gap-8 bg-(--color-quaternary) flex-1 h-fit shadow"
+        >
+          <div class="flex justify-between">
+            <h2 class="outfit-header text-xl text-(--color-primary)">
+              Mes courses
+            </h2>
+            <div class="flex gap-6">
+              <div class="flex gap-2 items-center relative">
+                <img
+                  src="../../../content/icons/sort-icon.svg"
+                  alt=""
+                  class="size-[20px]"
+                />
+                <button
+                  class="text-(--color-primary)"
+                  id="toggleBtn"
+                  aria-expanded="true"
+                  aria-haspopup="true"
+                >
+                  Trier
+                </button>
+                <!-- <div
+                class="absolute right-9 z-10 mt-2 top-9 divide-y divide-gray-100 origin-top-right rounded-sm bg-white text-(--color-secondary) shadow-lg ring-1 ring-black/5 focus:outline-hidden"
+                role="menu" aria-orientation="vertical" aria-labelledby="menu-button" tabindex="-1" id="dropdown">
+                <div class="py-1" role="none">
+                  <a href="#" class="block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-0">Date</a>
+                  <a href="#" class="block px-4 py-2 text-sm" role="menuitem" tabindex="-1"
+                    id="menu-item-1">Distance</a>
+                  <a href="#" class="block px-4 py-2 text-sm" role="menuitem" tabindex="-1" id="menu-item-2">Ville</a>
+                  <form method="POST" action="#" role="none">
+                    <button type="submit" class="block w-full px-4 py-2 text-left text-sm" role="menuitem" tabindex="-1"
+                      id="menu-item-3">Sign out</button>
+                  </form>
+                </div>
+
+              </div> -->
+                <div class="flex gap-2 items-center">
+                  <img
+                    src="../../../content/icons/filter-icon.svg"
+                    alt=""
+                    class="size-[20px]"
+                  />
+                  <button
+                    class="text-(--color-primary)"
+                    class="text-(--color-primary)"
+                    id="toggleBtn"
+                    aria-expanded="true"
+                    aria-haspopup="true"
+                  >
+                    Filtrer
+                  </button>
+                </div>
+              </div>
+            </div>
+          </div>
+          <!-- <div class="flex flex-col items-center justify-center gap-8">
+            <p>Vous ne participez à aucune course.</p>
+            <a href="" class="link flex w-fit items-center font-medium text-(--color-primary)">Participer à une
+            course<img src="../../../content/icons/arrow-icon.svg" alt="" class="size-[20px]"></a>
+        </div> -->
+          <div class="flex justify-between gap-10 flex-wrap">
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+            <div class="flex flex-col gap-2 p-4">
+              <img
+                src="../../../content/pictures/exemple-carte.png"
+                alt=""
+                class="w-[200px] h-[200px] rounded-sm outline-2 outline-(--color-quinary)"
+              />
+              <div class="flex flex-col gap-2">
+                <h3
+                  class="text-xl font-bold text-(--color-secondary) uppercase"
+                >
+                  Run in Lyon
+                </h3>
+                <ul class="flex flex-col gap-1">
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/calendar-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />18 août 2025
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/location-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Lyon, France
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/distance-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />35.7 km
+                  </li>
+                  <li class="flex gap-2 text-(--color-secondary)">
+                    <img
+                      src="../../../content/icons/organism-icon.svg"
+                      alt=""
+                      class="size-[20px]"
+                    />Médecins sans frontières
+                  </li>
+                  <li>
+                    <a
+                      href=""
+                      class="link text-(--color-primary) flex w-fit items-center font-medium"
+                      >En savoir plus<img
+                        src="../../../content/icons/arrow-icon.svg"
+                        alt=""
+                        class="size-[20px]"
+                    /></a>
+                  </li>
+                </ul>
+              </div>
+            </div>
+          </div>
+          <button
+            class="w-fit bg-(--color-primary) px-6 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+          >
+            <a href="./host-create-run.html">Créer</a>
+          </button>
+        </section>
+      </div>
+    </main>
+
+    <footer class="flex flex-col items-center py-10">
+      <div class="flex w-full items-center justify-between">
+        <p>2025 © Color Run</p>
+        <div class="flex flex-col gap-4">
+          <nav>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a class="link" href="../../general/index.html">Accueil</a>
+              </li>
+              <li>
+                <a class="link" href="../../general/runs.html"
+                  >Toutes les courses</a
+                >
+              </li>
+            </ul>
+          </nav>
+          <div class="flex gap-2">
+            <a href="https://www.instagram.com/">
+              <img
+                alt="Logo de l'application Instagram"
+                class="size-[25px]"
+                src="../../../content/logos/instagram-logo.svg"
+              />
+            </a>
+            <a href="https://x.com/">
+              <img
+                alt="Logo de l'application X"
+                class="size-[25px]"
+                src="../../../content/logos/x-logo.svg"
+              />
+            </a>
+            <a href="https://www.facebook.com/?locale=fr_FR">
+              <img
+                alt="Logo de l'application Facebook"
+                class="size-[25px]"
+                src="../../../content/logos/facebook-logo.svg"
+              />
+            </a>
+            <a href="https://www.youtube.com/">
+              <img
+                alt="Logo de l'application YouTube"
+                class="size-[25px]"
+                src="../../../content/logos/youtube-logo.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <style>
+      .show {
+        opacity: 1;
+        transform: scale(1);
+        pointer-events: auto;
+        transition: opacity 100ms ease-out, transform 100ms ease-out;
+      }
+
+      .hide {
+        opacity: 0;
+        transform: scale(0.95);
+        pointer-events: none;
+        transition: opacity 75ms ease-in, transform 75ms ease-in;
+      }
+    </style>
+
+    <script>
+      const dropdown = document.getElementById("dropdown");
+      const toggleBtn = document.getElementById("toggleBtn");
+      let isOpen = false;
+
+      toggleBtn.addEventListener("click", () => {
+        isOpen = !isOpen;
+
+        if (isOpen) {
+          dropdown.classList.remove("hide");
+          dropdown.classList.add("show");
+        } else {
+          dropdown.classList.remove("show");
+          dropdown.classList.add("hide");
+        }
+      });
+    </script>
+    <script src="../js/main.js"></script>
+  </body>
+</html>

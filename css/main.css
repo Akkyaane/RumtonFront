@@ -1,91 +1,83 @@
-@import url('https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap');
+@import url("https://fonts.googleapis.com/css2?family=Outfit:wght@100..900&display=swap");
 
 :root {
-    --size-1440: 1440px;
-    --color-primary: #7A00F5;
-    --color-secondary: #2C0057;   
-    --color-tertiary: #86DFFF;
-    --color-quaternary: #EFF7FF;
-    --color-quinary: #CC9CFF;
-    --color-six: #060202;
-} 
-  
-.outfit-header {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 600;
-    font-style: normal;
-}
- 
-.outfit-body {
-    font-family: "Outfit", sans-serif;
-    font-optical-sizing: auto;
-    font-weight: 400;
-    font-style: normal;
-}
+  --color-primary: #7a00f5;
+  --color-quaternary: #eff7ff;
+  --color-quinary: #cc9cff;
+  --color-secondary: #2c0057;
+  --color-tertiary: #86dfff;
 
-.link {
-    position: relative;
-    text-decoration: none;
-}
-
-.link:hover::after {
-    content: '';
-    position: absolute;
-    left: 0;
-    bottom: -2px;
-    width: 100%;
-    height: 2.5px;
-    background-color: var(--color-tertiary);
-}
-
-em {
-    font-style: normal;
-    font-weight: 500;
-    color: var(--color-secondary)
-}
-  
-
-/* * {
-    border: solid 0.1px black;
-} */
-
-.home {
-    background-image: url(../content/picture-1.jpg);
-    background-size: cover;
-    background-position: bottom;
-}
-
-
-body {
-    background-color: #fcfaff;
+  --size-1440: 1440px;
 }
 
 .hide {
-    display: none;
+  display: none;
+}
+
+.outfit-header {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 600;
+}
+
+.outfit-body {
+  font-family: "Outfit", sans-serif;
+  font-optical-sizing: auto;
+  font-style: normal;
+  font-weight: 400;
+}
+
+.link {
+  position: relative;
+  text-decoration: none;
+}
+
+.link:hover::after {
+  background-color: var(--color-tertiary);
+  bottom: -2px;
+  content: "";
+  height: 2.5px;
+  left: 0;
+  position: absolute;
+  width: 100%;
 }
 
 .popup {
-    position: fixed;
-    top: 0%;
-    right: 0%;
-    height: 100%;
-    width: 500px;
-    background-color: var(--color-f6f6f6);
-    z-index: 1000;
+  background-color: var(--color-f6f6f6);
+  height: 100%;
+  position: fixed;
+  right: 0%;
+  top: 0%;
+  width: 500px;
+  z-index: 1000;
 
-    .close-btn {
-        position: absolute;
-        top: -10px;
-        right: 20px;
-        font-size: 60px;
-        cursor: pointer;
-        color: var(--color-1accef);
-    }
+  .close-btn {
+    color: var(--color-1accef);
+    cursor: pointer;
+    font-size: 60px;
+    position: absolute;
+    right: 20px;
+    top: -10px;
+  }
 }
 
 .shadow {
-    box-shadow: rgba(134, 223, 255, 1) 7.5px 7.5px;
+  box-shadow: rgba(134, 223, 255, 1) 7.5px 7.5px;
 }
 
+body {
+  background-color: #fcfaff;
+}
 
+em {
+  color: var(--color-secondary);
+  font-style: normal;
+  font-weight: 500;
+}
+
+.home {
+  background-image: url(../../content/pictures/picture-1.jpg);
+  background-position: bottom;
+  background-size: cover;
+}
