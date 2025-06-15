@@ -9,7 +9,7 @@
   </head>
 
   <body
-    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
   >
     <header class="flex items-center justify-between py-4">
       <a href="../../general/index.html">
@@ -20,80 +20,80 @@
         />
       </a>
       <nav class="flex items-center">
-        <ul class="flex gap-8">
+        <ul class="flex gap-4">
           <li><a class="link" href="../../general/index.html">Accueil</a></li>
           <li>
             <a class="link" href="../../general/runs.html"
               >Toutes les courses</a
             >
           </li>
+          <li>
+            <a class="link" href="../../general/profile.html#host"
+              >Devenir organisateur</a
+            >
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main class="flex-1">
-      <div class="flex gap-6">
-        <nav
-          class="bg-(--color-quaternary) flex h-[400px] justify-center px-8 py-12 rounded-sm shadow w-[275px]"
-        >
-          <ul class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../../content/icons/board-icon.svg"
-                />
-                <a class="link text-lg" href="../../general/dashboard.html"
-                  >Mon tableau de bord</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../../content/icons/runner-icon.svg"
-                />
-                <a
-                  class="link text-lg"
-                  href="../../general/my-participations.html"
-                  >Mes participations</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../../content/icons/flag-icon.svg"
-                />
-                <a class="link text-lg" href="./host-my-runs.html"
-                  >Mes courses</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../../content/icons/user-icon.svg"
-                />
-                <a class="link text-lg" href="../../general/profile.html"
-                  >Mes informations</a
-                >
-              </li>
-            </div>
-            <li class="flex items-center gap-2 text-(--color-secondary)">
-              <img
-                alt=""
-                class="size-[20px]"
-                src="../../../content/icons/logout-icon.svg"
-              />
-              <a class="link text-lg" href="#">Se déconnecter</a>
-            </li>
-          </ul>
-        </nav>
-
+    <main class="flex flex-1 gap-6">
+      <nav
+        class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+      >
+        <ul class="flex flex-col gap-8">
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mon tableau de bord'"
+              class="size-[20px]"
+              src="../../../content/icons/board-icon.svg"
+            />
+            <a class="link text-lg" href="../../general/dashboard.html"
+              >Mon tableau de bord</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes participations'"
+              class="size-[20px]"
+              src="../../../content/icons/runner-icon.svg"
+            />
+            <a class="link text-lg" href="../../general/my-participations.html"
+              >Mes participations</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes courses'"
+              class="size-[20px]"
+              src="../../../content/icons/flag-icon.svg"
+            />
+            <a class="link text-lg" href="./host-my-runs.html">Mes courses</a>
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes informations'"
+              class="size-[20px]"
+              src="../../../content/icons/user-icon.svg"
+            />
+            <a class="link text-lg" href="../../general/profile.html"
+              >Mes informations</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Se déconnecter'"
+              class="size-[20px]"
+              src="../../../content/icons/logout-icon.svg"
+            />
+            <a class="link text-lg" href="#">Me déconnecter</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-1 flex-col gap-6">
         <section
-          class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow"
+          class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
         >
           <h2 class="outfit-header text-(--color-primary) text-xl">
             Organiser une course
@@ -205,16 +205,22 @@
 
     <footer class="flex flex-col items-center py-10">
       <div class="flex w-full items-center justify-between">
-        <p>2025 © Color Run</p>
+        <div class="flex flex-col gap-2">
+          <img alt="" class="w-[100px]" src="../../../content/logos/logo.svg" />
+          <p>2025 © Rumton</p>
+        </div>
         <div class="flex flex-col gap-4">
           <nav>
             <ul class="flex flex-col gap-2">
               <li>
-                <a class="link" href="../../general/index.html">Accueil</a>
+                <a class="link" href="./index.html">Accueil</a>
               </li>
               <li>
-                <a class="link" href="../../general/runs.html"
-                  >Toutes les courses</a
+                <a class="link" href="./runs.html">Toutes les courses</a>
+              </li>
+              <li>
+                <a class="link" href="./profile.html#host"
+                  >Devenir organisateur</a
                 >
               </li>
             </ul>
@@ -252,6 +258,6 @@
         </div>
       </div>
     </footer>
-    <script src="../../../js/main.js"></script>
+    <script src="../../js/main.js"></script>
   </body>
 </html>
