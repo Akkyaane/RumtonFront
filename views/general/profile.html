@@ -5,11 +5,11 @@
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rumton - Mes informations</title>
     <link href="../../dist/output.css" rel="stylesheet" />
-    <link rel="stylesheet" href="../../css/main.css" />
+    <link href="../../css/main.css" rel="stylesheet" />
   </head>
 
   <body
-    class="outfit-body w-(--size-1440) m-auto flex flex-col min-h-screen text-(--color-secondary)"
+    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
   >
     <header class="flex items-center justify-between py-4">
       <a href="./index.html">
@@ -20,124 +20,132 @@
         />
       </a>
       <nav class="flex items-center">
-        <ul class="flex gap-8">
+        <ul class="flex gap-4">
           <li><a class="link" href="./index.html">Accueil</a></li>
           <li><a class="link" href="./runs.html">Toutes les courses</a></li>
+          <li>
+            <a class="link" href="./profile.html#host">Devenir organisateur</a>
+          </li>
         </ul>
       </nav>
     </header>
 
-    <main class="flex-">
-      <div class="flex gap-6">
-        <nav
-          class="bg-(--color-quaternary) flex h-[400px] justify-center px-8 py-12 rounded-sm shadow w-[275px]"
-        >
-          <ul class="flex flex-col justify-between">
-            <div class="flex flex-col gap-8">
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../content/icons/board-icon.svg"
-                />
-                <a class="link text-lg" href="./dashboard.html"
-                  >Mon tableau de bord</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../content/icons/runner-icon.svg"
-                />
-                <a class="link text-lg" href="./my-participations.html"
-                  >Mes participations</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../content/icons/flag-icon.svg"
-                />
-                <a
-                  class="link text-lg"
-                  href="../specific/host/host-my-runs.html"
-                  >Mes courses</a
-                >
-              </li>
-              <li class="flex items-center gap-2 text-(--color-secondary)">
-                <img
-                  alt=""
-                  class="size-[20px]"
-                  src="../../content/icons/user-icon.svg"
-                />
-                <a class="link text-lg" href="./profile.html"
-                  >Mes informations</a
-                >
-              </li>
-            </div>
-            <li class="flex items-center gap-2 text-(--color-secondary)">
-              <img
-                alt=""
-                class="size-[20px]"
-                src="../../content/icons/logout-icon.svg"
-              />
-              <a class="link text-lg" href="#">Se déconnecter</a>
-            </li>
-          </ul>
-        </nav>
-
-        <div class="flex flex-col gap-6">
-          <div class="flex gap-6">
-            <section
-              class="flex flex-col rounded-sm p-12 gap-8 bg-(--color-quaternary) w-fit h-fit shadow"
+    <main class="flex flex-1 gap-6">
+      <nav
+        class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+      >
+        <ul class="flex flex-col gap-8">
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mon tableau de bord'"
+              class="size-[20px]"
+              src="../../content/icons/board-icon.svg"
+            />
+            <a class="link text-lg" href="./dashboard.html"
+              >Mon tableau de bord</a
             >
-              <h2 class="outfit-header text-xl text-(--color-primary)">
-                Mes informations
-              </h2>
-              <div>
-                <form action="" class="flex gap-8">
-                  <div class="flex flex-col gap-4">
-                    <div class="flex flex-col gap-2">
-                      <label for="nickname">Pseudonyme</label>
-                      <input
-                        type="text"
-                        name="nickname"
-                        id="nickname"
-                        value="john00"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                      <label for="firstname">Prénom</label>
-                      <input
-                        type="text"
-                        name="firstname"
-                        id="firstname"
-                        value="John"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                      <label for="lastname">Nom</label>
-                      <input
-                        type="text"
-                        name="lastname"
-                        id="lastname"
-                        value="Doe"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <div class="flex flex-col gap-2">
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes participations'"
+              class="size-[20px]"
+              src="../../content/icons/runner-icon.svg"
+            />
+            <a class="link text-lg" href="./my-participations.html"
+              >Mes participations</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes courses'"
+              class="size-[20px]"
+              src="../../content/icons/flag-icon.svg"
+            />
+            <a class="link text-lg" href="../specific/host/host-my-runs.html"
+              >Mes courses</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes informations'"
+              class="size-[20px]"
+              src="../../content/icons/user-icon.svg"
+            />
+            <a class="link text-lg" href="./profile.html">Mes informations</a>
+          </li>
+        </ul>
+        <ul>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Se déconnecter'"
+              class="size-[20px]"
+              src="../../content/icons/logout-icon.svg"
+            />
+            <a class="link text-lg" href="#">Me déconnecter</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-1 flex-col gap-6">
+        <div class="flex gap-6">
+          <section
+            class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow"
+          >
+            <h2 class="outfit-header text-(--color-primary) text-xl">
+              Mes informations
+            </h2>
+            <form action="" class="flex flex-col gap-6" method="post">
+              <div class="flex gap-10">
+                <div class="flex flex-col gap-4 w-[325px]">
+                  <div class="flex flex-col gap-2">
+                    <label for="nickname">Pseudonyme</label>
+                    <input
+                      type="text"
+                      name="nickname"
+                      id="nickname"
+                      value="john00"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="firstname">Prénom</label>
+                    <input
+                      type="text"
+                      name="firstname"
+                      id="firstname"
+                      value="John"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="lastname">Nom de famille</label>
+                    <input
+                      type="text"
+                      name="lastname"
+                      id="lastname"
+                      value="Doe"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="sex">Sexe</label>
+                    <input
+                      type="text"
+                      name="sex"
+                      id="sex"
+                      value="Homme"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+                  <!-- <div class="flex flex-col gap-2">
                       <label for="sex">Sexe</label>
                       <select
                         name="sex"
                         id="sex"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                        class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus:outline-2 focus:outline-(--color-primary)"
                         disabled
                       >
                         <option disabled selected>
@@ -147,91 +155,97 @@
                         <option value="2">Femme</option>
                         <option value="3">Autre</option>
                       </select>
-                    </div>
-                    <div class="flex flex-col gap-2">
-                      <label for="birthdate">Date de naissance</label>
-                      <input
-                        type="date"
-                        name="birthdate"
-                        id="birthdate"
-                        value="2000-06-20"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                      <label for="zip">Code postal</label>
-                      <input
-                        type="number"
-                        name="zip"
-                        id="zip"
-                        value="69007"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                      <label for="email">E-mail</label>
-                      <input
-                        type="email"
-                        name="email"
-                        id="email"
-                        value="john.doe@example.com"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <div class="flex flex-col gap-2">
-                      <label for="role">Rôle</label>
-                      <input
-                        type="text"
-                        name="role"
-                        id="role"
-                        value="Organisateur"
-                        class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                        disabled
-                      />
-                    </div>
-                    <input
-                      type="submit"
-                      name="send"
-                      id="send"
-                      value="Envoyer"
-                      class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) hide"
-                    />
-                    <button
-                      class="w-fit bg-(--color-primary) px-6 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
-                    >
-                      Éditer
-                    </button>
-                  </div>
+                  </div> -->
                   <div class="flex flex-col gap-2">
-                    <label for="profile-picture">Photo de profil</label>
-                    <img
-                      src="../../../content/pictures/picture-5.webp"
-                      alt=""
-                      class="size-[150px] rounded-sm"
-                    />
+                    <label for="birthdate">Date de naissance</label>
                     <input
-                      type="file"
-                      id="profile-picture"
-                      name="profile-picture"
-                      accept="image/png, image/jpeg"
-                      class="bg-white w-[200px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary) hide"
+                      type="date"
+                      name="birthdate"
+                      id="birthdate"
+                      value="2000-06-20"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                       disabled
                     />
                   </div>
-                </form>
+                  <div class="flex flex-col gap-2">
+                    <label for="zip">Code postal</label>
+                    <input
+                      type="number"
+                      name="zip"
+                      id="zip"
+                      value="69007"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="email">E-mail</label>
+                    <input
+                      type="email"
+                      name="email"
+                      id="email"
+                      value="john.doe@example.com"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+
+                  <div class="flex flex-col gap-2">
+                    <label for="role">Rôle</label>
+                    <input
+                      type="text"
+                      name="role"
+                      id="role"
+                      value="Organisateur"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      disabled
+                    />
+                  </div>
+                  <input
+                    type="submit"
+                    name="send"
+                    id="send"
+                    value="Valider"
+                    class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit hide"
+                  />
+                  <button
+                    class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                  >
+                    Éditer
+                  </button>
+                </div>
+                <div class="flex flex-col gap-2">
+                  <label for="profile-picture">Photo de profil</label>
+                  <img
+                    src="../../../content/pictures/picture-5.webp"
+                    alt="Photo de profil"
+                    class="size-[125px] rounded-sm"
+                  />
+                  <input
+                    type="file"
+                    id="profile-picture"
+                    name="profile-picture"
+                    accept="image/png, image/jpeg"
+                    class="bg-(--color-senary) w-[125px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                    disabled
+                  />
+                </div>
               </div>
-            </section>
+            </form>
+          </section>
+          <div class="flex flex-col gap-6">
             <section
-              class="flex flex-col rounded-sm p-12 gap-8 bg-(--color-quaternary) w-fit h-fit shadow"
+              class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
             >
-              <h2 class="outfit-header text-xl text-(--color-primary)">
+              <h2 class="outfit-header text-(--color-primary) text-xl">
                 Changer mon mot de passe
               </h2>
-              <div>
-                <form action="" class="flex flex-col gap-8">
+              <form
+                action=""
+                class="flex flex-col gap-6 w-[325px]"
+                method="post"
+              >
+                <div class="flex flex-col gap-4">
                   <div class="flex flex-col gap-2">
                     <label for="password">Mot de passe</label>
                     <input
@@ -239,7 +253,7 @@
                       name="password"
                       id="password"
                       value=""
-                      class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                       disabled
                     />
                   </div>
@@ -252,7 +266,7 @@
                       name="password-check"
                       id="password-check"
                       value=""
-                      class="bg-white w-[350px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                       disabled
                     />
                   </div>
@@ -260,16 +274,44 @@
                     type="submit"
                     name="send"
                     id="send"
-                    value="Envoyer"
-                    class="w-fit bg-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) hide"
+                    value="Valider"
+                    class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit hide"
                   />
                   <button
-                    class="w-fit bg-(--color-primary) px-6 py-2 rounded-sm text-[#ffffff] cursor-pointer border-1 border-[#ffffff] hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+                    class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
                   >
                     Éditer
                   </button>
-                </form>
+                </div>
+              </form>
+            </section>
+            <section
+              class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
+              id="host"
+            >
+              <div class="flex flex-col flex-wrap">
+                <h2 class="outfit-header text-xl text-(--color-primary)">
+                  Devenir organisateur
+                </h2>
+                <p class="text-(--color-secondary) text-sm">
+                  Organisez des courses et soutenez les associations !
+                </p>
               </div>
+              <form action="" class="flex flex-col gap-4">
+                <textarea
+                  name="message"
+                  id="message"
+                  placeholder="Pour quelle(s) raison(s) souhaitez-vous devenir organisateur ?"
+                  class="bg-(--color-senary) rounded-sm py-2 px-4 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary) w-[325px] h-[200px] resize-none"
+                ></textarea>
+                <input
+                  type="submit"
+                  name="send"
+                  id="send"
+                  value="Envoyer"
+                  class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                />
+              </form>
             </section>
           </div>
         </div>
@@ -278,16 +320,22 @@
 
     <footer class="flex flex-col items-center py-10">
       <div class="flex w-full items-center justify-between">
-        <p>2025 © Color Run</p>
+        <div class="flex flex-col gap-2">
+          <img alt="Logo de l'application Rumton" class="w-[100px]" src="../../content/logos/logo.svg" />
+          <p>2025 © Rumton</p>
+        </div>
         <div class="flex flex-col gap-4">
           <nav>
             <ul class="flex flex-col gap-2">
               <li>
-                <a class="link" href="../../general/index.html">Accueil</a>
+                <a class="link" href="./index.html">Accueil</a>
               </li>
               <li>
-                <a class="link" href="../../general/runs.html"
-                  >Toutes les courses</a
+                <a class="link" href="./runs.html">Toutes les courses</a>
+              </li>
+              <li>
+                <a class="link" href="./profile.html#host"
+                  >Devenir organisateur</a
                 >
               </li>
             </ul>
