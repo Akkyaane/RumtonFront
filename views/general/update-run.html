@@ -3,34 +3,30 @@
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <title>Rumton - Organiser une course</title>
-    <link href="../../../dist/output.css" rel="stylesheet" />
-    <link href="../../../css/main.css" rel="stylesheet" />
+    <title>Rumton - Éditer une course</title>
+    <link href="../../dist/output.css" rel="stylesheet" />
+    <link href="../../css/main.css" rel="stylesheet" />
   </head>
 
   <body
     class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
   >
     <header class="flex items-center justify-between py-4">
-      <a href="../../general/index.html">
+      <a href="./index.html">
         <img
           alt="Logo de l'application Rumton"
           class="w-[100px]"
-          src="../../../content/logos/logo.svg"
+          src="../../content/logos/logo.svg"
         />
       </a>
       <nav class="flex items-center">
         <ul class="flex gap-4">
-          <li><a class="link" href="../../general/index.html">Accueil</a></li>
+          <li><a class="link" href="./index.html">Accueil</a></li>
           <li>
-            <a class="link" href="../../general/runs.html"
-              >Toutes les courses</a
-            >
+            <a class="link" href="./runs.html">Toutes les courses</a>
           </li>
           <li>
-            <a class="link" href="../../general/profile.html#host"
-              >Devenir organisateur</a
-            >
+            <a class="link" href="./profile.html#host">Devenir organisateur</a>
           </li>
         </ul>
       </nav>
@@ -45,9 +41,9 @@
             <img
               alt="Icône de la section 'Mon tableau de bord'"
               class="size-[20px]"
-              src="../../../content/icons/board-icon.svg"
+              src="../../content/icons/board-icon.svg"
             />
-            <a class="link text-lg" href="../../general/dashboard.html"
+            <a class="link text-lg" href="./dashboard.html"
               >Mon tableau de bord</a
             >
           </li>
@@ -55,9 +51,9 @@
             <img
               alt="Icône de la section 'Mes participations'"
               class="size-[20px]"
-              src="../../../content/icons/runner-icon.svg"
+              src="../../content/icons/runner-icon.svg"
             />
-            <a class="link text-lg" href="../../general/my-participations.html"
+            <a class="link text-lg" href="./my-participations.html"
               >Mes participations</a
             >
           </li>
@@ -65,19 +61,19 @@
             <img
               alt="Icône de la section 'Mes courses'"
               class="size-[20px]"
-              src="../../../content/icons/flag-icon.svg"
+              src="../../content/icons/flag-icon.svg"
             />
-            <a class="link text-lg" href="./host-my-runs.html">Mes courses</a>
+            <a class="link text-lg" href="../specific/host/host-my-runs.html"
+              >Mes courses</a
+            >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mes informations'"
               class="size-[20px]"
-              src="../../../content/icons/user-icon.svg"
+              src="../../content/icons/user-icon.svg"
             />
-            <a class="link text-lg" href="../../general/profile.html"
-              >Mes informations</a
-            >
+            <a class="link text-lg" href="./profile.html">Mes informations</a>
           </li>
         </ul>
         <ul>
@@ -85,7 +81,7 @@
             <img
               alt="Icône de la section 'Se déconnecter'"
               class="size-[20px]"
-              src="../../../content/icons/logout-icon.svg"
+              src="../../content/icons/logout-icon.svg"
             />
             <a class="link text-lg" href="#">Me déconnecter</a>
           </li>
@@ -99,13 +95,13 @@
             href="../general/dashboard.html"
             class="link flex w-fit items-center font-medium text-(--color-primary)"
             ><img
-              src="../../../content/icons/arrow-icon.svg"
+              src="../../content/icons/arrow-icon.svg"
               alt="Icône du bouton 'Retour'"
               class="size-[20px] rotate-180"
             />Retour</a
           >
           <h2 class="outfit-header text-(--color-primary) text-xl">
-            Organiser une course
+            Éditer une course
           </h2>
           <form action="" class="flex flex-col gap-6" method="post">
             <div class="flex flex-col gap-2">
@@ -114,40 +110,40 @@
                 class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="title"
                 name="title"
-                placeholder="Titre"
+                value="Run in Lyon"
                 required
                 type="text"
               />
             </div>
-
             <div class="flex flex-col gap-2">
               <label for="description">Description*</label>
               <textarea
                 class="bg-(--color-senary) h-[219px] w-[350px] resize-none rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="description"
                 name="description"
-                placeholder="Écrire une description..."
                 required
-              ></textarea>
+              >
+Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia magni quibusdam iure ad, sit ea doloremque, nostrum optio commodi atque alias sunt voluptates est laborum beatae quo adipisci!</textarea
+              >
             </div>
             <div class="flex flex-col gap-2">
               <label for="city">Ville*</label>
               <input
                 class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                id="city"
-                name="city"
-                placeholder="Ville"
+                id="title"
+                name="title"
+                value="Lyon"
                 required
                 type="text"
               />
             </div>
-
             <div class="flex flex-col gap-2">
               <label for="datetime">Date et heure*</label>
               <input
                 class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                 id="datetime"
                 name="datetime"
+                value="2025-08-18T08:40"
                 required
                 type="datetime-local"
               />
@@ -177,6 +173,7 @@
                 id="price"
                 name="price"
                 placeholder="Prix"
+                value="10"
                 required
                 type="number"
               />
@@ -190,6 +187,7 @@
                 name="organism"
                 placeholder="Organisme"
                 required
+                value="Médecins sans frontières"
                 type="text"
               />
             </div>
@@ -221,15 +219,13 @@
           <nav>
             <ul class="flex flex-col gap-2">
               <li>
-                <a class="link" href="../../general/index.html">Accueil</a>
+                <a class="link" href="./index.html">Accueil</a>
               </li>
               <li>
-                <a class="link" href="../../general/runs.html"
-                  >Toutes les courses</a
-                >
+                <a class="link" href="./runs.html">Toutes les courses</a>
               </li>
               <li>
-                <a class="link" href="../../general/profile.html#host"
+                <a class="link" href="./profile.html#host"
                   >Devenir organisateur</a
                 >
               </li>
@@ -240,28 +236,28 @@
               <img
                 alt="Logo de l'application Instagram"
                 class="size-[25px]"
-                src="../../../content/logos/instagram-logo.svg"
+                src="../../content/logos/instagram-logo.svg"
               />
             </a>
             <a href="https://x.com/">
               <img
                 alt="Logo de l'application X"
                 class="size-[25px]"
-                src="../../../content/logos/x-logo.svg"
+                src="../../content/logos/x-logo.svg"
               />
             </a>
             <a href="https://www.facebook.com/?locale=fr_FR">
               <img
                 alt="Logo de l'application Facebook"
                 class="size-[25px]"
-                src="../../../content/logos/facebook-logo.svg"
+                src="../../content/logos/facebook-logo.svg"
               />
             </a>
             <a href="https://www.youtube.com/">
               <img
                 alt="Logo de l'application YouTube"
                 class="size-[25px]"
-                src="../../../content/logos/youtube-logo.svg"
+                src="../../content/logos/youtube-logo.svg"
               />
             </a>
           </div>
