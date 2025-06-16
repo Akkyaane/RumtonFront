@@ -1,0 +1,570 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>Rumton - Tous les utilisateurs</title>
+    <link href="../../../dist/output.css" rel="stylesheet" />
+    <link href="../../../css/main.css" rel="stylesheet" />
+  </head>
+
+  <body
+    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
+  >
+    <header class="flex items-center justify-between py-4">
+      <a href="../../general/index.html">
+        <img
+          alt="Logo de l'application Rumton"
+          class="w-[100px]"
+          src="../../../content/logos/logo.svg"
+        />
+      </a>
+      <nav class="flex items-center">
+        <ul class="flex gap-4">
+          <li><a class="link" href="../../general/index.html">Accueil</a></li>
+        </ul>
+      </nav>
+    </header>
+
+    <main class="flex flex-1 gap-6">
+      <nav
+        class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+      >
+        <ul class="flex flex-col gap-8">
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mon tableau de bord'"
+              class="size-[20px]"
+              src="../../../content/icons/board-icon.svg"
+            />
+            <a class="link text-lg" href="./administrator-dashboard.html"
+              >Mon tableau de bord</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Utilisateurs'"
+              class="size-[20px]"
+              src="../../../content/icons/users-icon.svg"
+            />
+            <a class="link text-lg" href="./administrator-users.html"
+              >Utilisateurs</a
+            >
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Courses'"
+              class="size-[20px]"
+              src="../../../content/icons/flag-icon.svg"
+            />
+            <a class="link text-lg" href="../../general/runs.html">Courses</a>
+          </li>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Mes informations'"
+              class="size-[20px]"
+              src="../../../content/icons/user-icon.svg"
+            />
+            <a class="link text-lg" href="../../general/profile.html"
+              >Mes informations</a
+            >
+          </li>
+        </ul>
+        <ul>
+          <li class="flex items-center gap-2 text-(--color-secondary)">
+            <img
+              alt="Icône de la section 'Se déconnecter'"
+              class="size-[20px]"
+              src="../../../content/icons/logout-icon.svg"
+            />
+            <a class="link text-lg" href="#">Me déconnecter</a>
+          </li>
+        </ul>
+      </nav>
+      <div class="flex flex-col flex-1 gap-6 h-fit">
+        <section
+          class="bg-(--color-quaternary) flex flex-1 flex-col gap-8 p-12 rounded-sm shadow"
+        >
+          <h2 class="outfit-header text-xl text-(--color-primary)">
+            Les derniers utilisateurs enregistrés
+          </h2>
+          <div class="flex flex-col items-center justify-center gap-4">
+            <p>Aucun utilisateur enregistré récemment.</p>
+            <a
+              class="flex font-medium items-center link text-(--color-primary) w-fit"
+              href="./administrator-users.html"
+              >Consulter tous les utilisateurs<img
+                alt="Icône du bouton 'Consulter tous les utilisateurs'"
+                class="size-[20px]"
+                src="../../../content/icons/arrow-icon.svg"
+            /></a>
+          </div>
+          <div class="flex justify-center gap-8">
+            <table class="table-auto bg-(--color-senary) w-full">
+              <thead>
+                <tr>
+                  <th
+                    class="border-2 border-(--color-quinary) p-4 font-semibold"
+                  >
+                    Pseudo
+                  </th>
+                  <th
+                    class="border-2 border-(--color-quinary) p-4 font-semibold"
+                  >
+                    Email
+                  </th>
+                  <th
+                    class="border-2 border-(--color-quinary) p-4 font-semibold"
+                  >
+                    Rôle
+                  </th>
+                  <th
+                    class="border-2 border-(--color-quinary) p-4 font-semibold"
+                  >
+                    Action
+                  </th>
+                </tr>
+              </thead>
+              <tbody class="border-b-2 border-(--color-quinary) text-center">
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    LunaSky
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    luna.sky@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Administrateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    DarkWolf
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    dark.wolf@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Echo33
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    echo33@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    PixieDust
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    pixie.d@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    NeoByte
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    neo.byte@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    QueenBee
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    queen.bee@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    IronFist
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    iron.f@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    StellaNova
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    stella.n@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    ByteMaster
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    byte.master@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    ShadowCat
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    shadow.cat@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    FireFox
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    fire.fox@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    CrystalCode
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    crystal.code@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    AlphaTech
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    alpha.tech@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Administrateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    MoonBlade
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    moon.blade@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    NovaSpark
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    nova.spark@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    CodeNinja
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    code.ninja@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    ZenMaster
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    zen.master@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    BlazeStorm
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    blaze.storm@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Participant
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    CyberQueen
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    cyber.queen@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Administrateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+                <tr>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    PhantomByte
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    phantom.byte@example.com
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    Organisateur
+                  </td>
+                  <td class="border-x-2 border-(--color-quinary) p-4">
+                    <a
+                      href="./administrator-user.html"
+                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                    >
+                      Consulter
+                    </a>
+                  </td>
+                </tr>
+              </tbody>
+            </table>
+          </div>
+        </section>
+      </div>
+    </main>
+
+    <footer class="flex flex-col items-center py-10">
+      <div class="flex w-full items-center justify-between">
+        <div class="flex flex-col gap-2">
+          <a href="../../general/index.html"
+            ><img
+              alt="Logo de l'application Rumton"
+              class="w-[100px]"
+              src="../../../content/logos/logo.svg"
+          /></a>
+          <p>2025 © Rumton</p>
+        </div>
+        <div class="flex flex-col gap-4">
+          <nav>
+            <ul class="flex flex-col gap-2">
+              <li>
+                <a class="link" href="../../general/index.html">Accueil</a>
+              </li>
+            </ul>
+          </nav>
+          <div class="flex gap-2">
+            <a href="https://www.instagram.com/">
+              <img
+                alt="Logo de l'application Instagram"
+                class="size-[25px]"
+                src="../../../content/logos/instagram-logo.svg"
+              />
+            </a>
+            <a href="https://x.com/">
+              <img
+                alt="Logo de l'application X"
+                class="size-[25px]"
+                src="../../../content/logos/x-logo.svg"
+              />
+            </a>
+            <a href="https://www.facebook.com/?locale=fr_FR">
+              <img
+                alt="Logo de l'application Facebook"
+                class="size-[25px]"
+                src="../../../content/logos/facebook-logo.svg"
+              />
+            </a>
+            <a href="https://www.youtube.com/">
+              <img
+                alt="Logo de l'application YouTube"
+                class="size-[25px]"
+                src="../../../content/logos/youtube-logo.svg"
+              />
+            </a>
+          </div>
+        </div>
+      </div>
+    </footer>
+    <script src="../../js/main.js"></script>
+  </body>
+</html>
