@@ -151,7 +151,7 @@
         >
           <a
             class="link flex items-center w-fit font-medium text-(--color-primary)"
-            href="../general/dashboard.html"
+            href="./run.html"
             ><img
               alt="Icône du bouton 'Retour'"
               class="size-[20px] rotate-180"
@@ -246,13 +246,22 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia m
                 value="Médecins sans frontières"
               />
             </div>
-            <input
-              class="border-1 bg-(--color-primary) border-[#ffffff] cursor-pointer hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] w-fit"
-              id="send"
-              name="send"
-              type="submit"
-              value="Valider"
-            />
+            <div class="flex gap-2">
+              <input
+                type="submit"
+                name="send"
+                id="send"
+                value="Valider"
+                class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+              />
+              <input
+                type="submit"
+                name="cancel"
+                id="cancel"
+                value="Annuler"
+                class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-secondary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-secondary) hover:bg-transparent hover:text-(--color-secondary) w-fit"
+              />
+            </div>
           </form>
         </section>
       </div>
