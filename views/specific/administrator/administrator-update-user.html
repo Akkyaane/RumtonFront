@@ -87,11 +87,11 @@
             class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow"
           >
             <a
-              class="link flex items-center w-fit font-medium text-(--color-primary)"
+              class="flex items-center link text-(--color-primary) font-medium w-fit"
               href="./administrator-users.html"
               ><img
                 alt="Icône du bouton 'Retour'"
-                class="size-[20px] rotate-180"
+                class="rotate-180 size-[20px]"
                 src="../../../content/icons/arrow-icon.svg"
               />Retour</a
             >
@@ -104,42 +104,42 @@
                   <div class="flex flex-col gap-2">
                     <label for="nickname">Pseudonyme</label>
                     <input
-                      type="text"
-                      name="nickname"
+                      class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="nickname"
+                      name="nickname"
+                      type="text"
                       value="john00"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="firstname">Prénom</label>
                     <input
-                      type="text"
-                      name="firstname"
+                      class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="firstname"
+                      name="firstname"
+                      type="text"
                       value="John"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="lastname">Nom de famille</label>
                     <input
-                      type="text"
-                      name="lastname"
+                      class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="lastname"
+                      name="lastname"
+                      type="text"
                       value="Doe"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="sex">Sexe</label>
                     <select
-                      name="sex"
+                      class="bg-(--color-senary) focus:outline-2 focus:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="sex"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus:outline-2 focus:outline-(--color-primary)"
+                      name="sex"
                     >
                       <option disabled>Sélectionner une valeur</option>
-                      <option value="1" selected>Homme</option>
+                      <option selected value="1">Homme</option>
                       <option value="2">Femme</option>
                       <option value="3">Autre</option>
                     </select>
@@ -147,77 +147,77 @@
                   <div class="flex flex-col gap-2">
                     <label for="birthdate">Date de naissance</label>
                     <input
-                      type="date"
-                      name="birthdate"
+                      class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="birthdate"
+                      name="birthdate"
+                      type="date"
                       value="2000-06-20"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="zip">Code postal</label>
                     <input
-                      type="number"
-                      name="zip"
+                      class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="zip"
+                      name="zip"
+                      type="number"
                       value="69007"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="email">E-mail</label>
                     <input
-                      type="email"
-                      name="email"
+                      class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="email"
+                      name="email"
+                      type="email"
                       value="john.doe@example.com"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     />
                   </div>
 
                   <div class="flex flex-col gap-2">
                     <label for="role">Rôle</label>
                     <select
-                      name="role"
+                      class="bg-(--color-senary) focus:outline-2 focus:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                       id="role"
-                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus:outline-2 focus:outline-(--color-primary)"
+                      name="role"
                     >
                       <option disabled>Sélectionner une valeur</option>
-                      <option value="1" selected>Administrateur</option>
+                      <option selected value="1">Administrateur</option>
                       <option value="2">Organisateur</option>
                       <option value="3">Participant</option>
                     </select>
                   </div>
                   <div class="flex gap-2">
                     <input
-                      type="submit"
-                      name="send"
+                      class="bg-(--color-primary) border-1 border-[#ffffff] cursor-pointer hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] w-fit"
                       id="send"
+                      name="send"
+                      type="submit"
                       value="Valider"
-                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
                     />
                     <input
-                      type="submit"
-                      name="cancel"
+                      class="bg-(--color-secondary) border-1 border-[#ffffff] cursor-pointer hover:border-1 hover:border-(--color-secondary) hover:bg-transparent hover:text-(--color-secondary) px-3 py-2 rounded-sm text-[#ffffff] w-fit"
                       id="cancel"
+                      name="cancel"
+                      type="submit"
                       value="Annuler"
-                      class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-secondary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-secondary) hover:bg-transparent hover:text-(--color-secondary) w-fit"
                     />
                   </div>
                 </div>
                 <div class="flex flex-col gap-2">
                   <label for="profile-picture">Photo de profil</label>
                   <img
-                    src="../../../content/pictures/picture-5.webp"
                     alt="Photo de profil"
-                    class="size-[125px] rounded-sm"
+                    class="rounded-sm size-[125px]"
+                    src="../../../content/pictures/picture-5.webp"
                   />
                   <input
-                    type="file"
+                    accept="image/png, image/jpeg"
+                    class="bg-(--color-senary) px-4 py-2 rounded-sm w-[125px] outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                     id="profile-picture"
                     name="profile-picture"
-                    accept="image/png, image/jpeg"
-                    class="bg-(--color-senary) w-[125px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                    type="file"
                   />
                 </div>
               </div>

@@ -38,7 +38,7 @@
 
     <main class="flex flex-1 gap-6">
       <nav
-        class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+        class="bg-(--color-quaternary) flex flex-col h-[400px] justify-between px-8 py-12 rounded-sm shadow"
       >
         <ul class="flex flex-col gap-8">
           <li class="flex items-center gap-2 text-(--color-secondary)">
@@ -93,7 +93,7 @@
       </nav>
       <div class="flex flex-1 flex-col gap-6">
         <section
-          class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
+          class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow w-fit"
         >
           <a
             class="flex font-medium items-center link text-(--color-primary) w-fit"
@@ -163,7 +163,7 @@
                 value=""
               />
               <div
-                class="after:content-[''] after:absolute after:bg-(--color-senary) after:border-2 after:border-(--color-senary) after:h-5 after:rounded-full after:top-[2px] after:start-[2px] after:w-5 after:transition-all bg-(--color-secondary) h-6 peer-checked:bg-(--color-primary) peer-checked:after:translate-x-full peer-checked:after:border-(--color-senary) relative rounded-full w-11 rtl:peer-checked:after:-translate-x-full"
+                class="after:content-[''] after:absolute after:bg-(--color-senary) after:border-2 after:border-(--color-senary) after:h-5 after:rounded-full after:top-[2px] after:start-[2px] after:w-5 after:transition-all bg-(--color-secondary) h-6 peer-checked:bg-(--color-primary) peer-checked:after:translate-x-full peer-checked:after:border-(--color-senary) relative rounded-full rtl:peer-checked:after:-translate-x-full w-11"
               ></div>
             </label>
             <div class="flex flex-col gap-2">
@@ -190,18 +190,18 @@
             </div>
             <div class="flex gap-2">
               <input
-                type="submit"
-                name="send"
-                id="send"
-                value="Valider"
                 class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                id="send"
+                name="send"
+                type="submit"
+                value="Valider"
               />
               <input
-                type="submit"
-                name="cancel"
-                id="cancel"
-                value="Annuler"
                 class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-secondary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-secondary) hover:bg-transparent hover:text-(--color-secondary) w-fit"
+                id="cancel"
+                name="cancel"
+                type="submit"
+                value="Annuler"
               />
             </div>
           </form>
