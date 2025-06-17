@@ -4,12 +4,12 @@
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
     <title>Rumton - Mes informations</title>
-    <link href="../../dist/output.css" rel="stylesheet" />
     <link href="../../css/main.css" rel="stylesheet" />
+    <link href="../../dist/output.css" rel="stylesheet" />
   </head>
 
   <body
-    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) w-(--size-1440)"
   >
     <header class="flex items-center justify-between py-4">
       <a href="./index.html">
@@ -33,7 +33,7 @@
     <main class="flex flex-1 gap-6">
       <div class="flex flex-col gap-4">
         <nav
-          class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+          class="bg-(--color-quaternary) flex flex-col h-[400px] justify-between px-8 py-12 rounded-sm shadow"
         >
           <ul class="flex flex-col gap-8">
             <li class="flex items-center gap-2 text-(--color-secondary)">
@@ -87,7 +87,7 @@
           </ul>
         </nav>
         <nav
-          class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+          class="bg-(--color-quaternary) flex flex-col h-[400px] justify-between px-8 py-12 rounded-sm shadow"
         >
           <ul class="flex flex-col gap-8">
             <li class="flex items-center gap-2 text-(--color-secondary)">
@@ -146,7 +146,7 @@
       <div class="flex flex-1 flex-col gap-6">
         <div class="flex gap-6">
           <section
-            class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow"
+            class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow"
           >
             <h2 class="outfit-header text-(--color-primary) text-xl">
               Mes informations
@@ -157,42 +157,42 @@
                   <div class="flex flex-col gap-2">
                     <label for="nickname">Pseudonyme</label>
                     <input
-                      type="text"
-                      name="nickname"
-                      id="nickname"
-                      value="john00"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="nickname"
+                      name="nickname"
+                      type="text"
+                      value="john00"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="firstname">Prénom</label>
                     <input
-                      type="text"
-                      name="firstname"
-                      id="firstname"
-                      value="John"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="firstname"
+                      name="firstname"
+                      type="text"
+                      value="John"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="lastname">Nom de famille</label>
                     <input
-                      type="text"
-                      name="lastname"
-                      id="lastname"
-                      value="Doe"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="lastname"
+                      name="lastname"
+                      type="text"
+                      value="Doe"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="sex">Sexe</label>
                     <select
-                      name="sex"
-                      id="sex"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus:outline-2 focus:outline-(--color-primary)"
+                      id="sex"
+                      name="sex"
                     >
                       <option disabled>Sélectionner une valeur</option>
-                      <option value="1" selected>Homme</option>
+                      <option selected value="1">Homme</option>
                       <option value="2">Femme</option>
                       <option value="3">Autre</option>
                     </select>
@@ -200,52 +200,52 @@
                   <div class="flex flex-col gap-2">
                     <label for="birthdate">Date de naissance</label>
                     <input
-                      type="date"
-                      name="birthdate"
-                      id="birthdate"
-                      value="2000-06-20"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="birthdate"
+                      name="birthdate"
+                      type="date"
+                      value="2000-06-20"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="zip">Code postal</label>
                     <input
-                      type="number"
-                      name="zip"
-                      id="zip"
-                      value="69007"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="zip"
+                      name="zip"
+                      type="number"
+                      value="69007"
                     />
                   </div>
                   <div class="flex flex-col gap-2">
                     <label for="email">E-mail</label>
                     <input
-                      type="email"
-                      name="email"
-                      id="email"
-                      value="john.doe@example.com"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary)/50 focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                       disabled
+                      id="email"
+                      name="email"
+                      type="email"
+                      value="john.doe@example.com"
                     />
                   </div>
 
                   <div class="flex flex-col gap-2">
                     <label for="role">Rôle</label>
                     <input
-                      type="text"
-                      name="role"
-                      id="role"
-                      value="Organisateur"
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary)/50 focus-visible:outline-2 focus-visible:outline-(--color-primary)"
                       disabled
+                      id="role"
+                      name="role"
+                      type="text"
+                      value="Organisateur"
                     />
                   </div>
                   <input
-                    type="submit"
-                    name="send"
+                    class="border-1 cursor-pointer hide rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
                     id="send"
+                    name="send"
+                    type="submit"
                     value="Valider"
-                    class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit hide"
                   />
                   <div>
                     <button
@@ -263,17 +263,17 @@
                 <div class="flex flex-col gap-2">
                   <label for="profile-picture">Photo de profil</label>
                   <img
-                    src="../../content/pictures/picture-5.webp"
                     alt="Photo de profil"
-                    class="size-[125px] rounded-sm"
+                    class="rounded-sm size-[125px]"
+                    src="../../content/pictures/picture-5.webp"
                   />
                   <input
-                    type="file"
+                    accept="image/png, image/jpeg"
+                    class="bg-(--color-senary) rounded-sm w-[125px] px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                    disabled
                     id="profile-picture"
                     name="profile-picture"
-                    accept="image/png, image/jpeg"
-                    class="bg-(--color-senary) w-[125px] rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                    disabled
+                    type="file"
                   />
                 </div>
               </div>
@@ -281,7 +281,7 @@
           </section>
           <div class="flex flex-col gap-6">
             <section
-              class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
+              class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow w-fit"
             >
               <h2 class="outfit-header text-(--color-primary) text-xl">
                 Changer mon mot de passe
@@ -295,11 +295,11 @@
                   <div class="flex flex-col gap-2">
                     <label for="password">Mot de passe</label>
                     <input
-                      type="password"
-                      name="password"
-                      id="password"
-                      value=""
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="password"
+                      name="password"
+                      type="password"
+                      value=""
                     />
                   </div>
                   <div class="flex flex-col gap-2">
@@ -307,19 +307,19 @@
                       >Confirmation du mot de passe</label
                     >
                     <input
-                      type="password"
-                      name="password-check"
-                      id="password-check"
-                      value=""
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="password-check"
+                      name="password-check"
+                      type="password"
+                      value=""
                     />
                   </div>
                   <input
-                    type="submit"
-                    name="send"
+                    class="border-1 cursor-pointer hide rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
                     id="send"
+                    name="send"
+                    type="submit"
                     value="Valider"
-                    class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit hide"
                   />
                   <div>
                     <button
@@ -337,11 +337,11 @@
               </form>
             </section>
             <section
-              class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
+              class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow w-fit"
               id="host"
             >
               <div class="flex flex-col flex-wrap">
-                <h2 class="outfit-header text-xl text-(--color-primary)">
+                <h2 class="outfit-header text-(--color-primary) text-xl">
                   Devenir organisateur
                 </h2>
                 <p class="text-(--color-secondary) text-sm">
@@ -350,17 +350,17 @@
               </div>
               <form action="" class="flex flex-col gap-4">
                 <textarea
-                  name="message"
+                  class="bg-(--color-senary) h-[200px] rounded-sm w-[325px] py-2 px-4 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary) resize-none"
                   id="message"
+                  name="message"
                   placeholder="Pour quelle(s) raison(s) souhaitez-vous devenir organisateur ?"
-                  class="bg-(--color-senary) rounded-sm py-2 px-4 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary) w-[325px] h-[200px] resize-none"
                 ></textarea>
                 <input
-                  type="submit"
-                  name="send"
-                  id="send"
-                  value="Envoyer"
                   class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+                  id="send"
+                  name="send"
+                  type="submit"
+                  value="Envoyer"
                 />
               </form>
             </section>

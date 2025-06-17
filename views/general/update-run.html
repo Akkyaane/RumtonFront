@@ -35,7 +35,7 @@
     <main class="flex flex-1 gap-6">
       <div class="flex flex-col gap-4">
         <nav
-          class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+          class="bg-(--color-quaternary) flex flex-col h-[400px] justify-between px-8 py-12 rounded-sm shadow"
         >
           <ul class="flex flex-col gap-8">
             <li class="flex items-center gap-2 text-(--color-secondary)">
@@ -89,7 +89,7 @@
           </ul>
         </nav>
         <nav
-          class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+          class="bg-(--color-quaternary) flex flex-col h-[400px] justify-between px-8 py-12 rounded-sm shadow"
         >
           <ul class="flex flex-col gap-8">
             <li class="flex items-center gap-2 text-(--color-secondary)">
@@ -147,36 +147,36 @@
       </div>
       <div class="flex flex-1 flex-col gap-6">
         <section
-          class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
+          class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow w-fit"
         >
           <a
+            class="link flex items-center w-fit font-medium text-(--color-primary)"
             href="../general/dashboard.html"
-            class="link flex w-fit items-center font-medium text-(--color-primary)"
             ><img
-              src="../../content/icons/arrow-icon.svg"
               alt="Icône du bouton 'Retour'"
               class="size-[20px] rotate-180"
+              src="../../content/icons/arrow-icon.svg"
             />Retour</a
           >
-          <h2 class="outfit-header text-(--color-primary) text-xl">
+          <h2 class="outfit-header text-xl text-(--color-primary)">
             Éditer une course
           </h2>
           <form action="" class="flex flex-col gap-6" method="post">
             <div class="flex flex-col gap-2">
               <label for="title">Titre*</label>
               <input
-                class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="title"
                 name="title"
-                value="Run in Lyon"
                 required
                 type="text"
+                value="Run in Lyon"
               />
             </div>
             <div class="flex flex-col gap-2">
               <label for="description">Description*</label>
               <textarea
-                class="bg-(--color-senary) h-[219px] w-[350px] resize-none rounded-sm px-4 py-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) h-[219px] outline-1 outline-(--color-quinary) px-4 py-2 resize-none rounded-sm w-[350px]"
                 id="description"
                 name="description"
                 required
@@ -187,26 +187,25 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia m
             <div class="flex flex-col gap-2">
               <label for="city">Ville*</label>
               <input
-                class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="title"
                 name="title"
-                value="Lyon"
                 required
                 type="text"
+                value="Lyon"
               />
             </div>
             <div class="flex flex-col gap-2">
               <label for="datetime">Date et heure*</label>
               <input
-                class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="datetime"
                 name="datetime"
-                value="2025-08-18T08:40"
                 required
                 type="datetime-local"
+                value="2025-08-18T08:40"
               />
             </div>
-
             <label
               class="inline-flex w-fit cursor-pointer items-center"
               for="obstacles"
@@ -220,38 +219,35 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia m
                 value=""
               />
               <div
-                class="after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:h-5 after:w-5 after:rounded-full after:border after:border-gray-300 after:bg-(--color-senary) after:transition-all bg-(--color-quinary) relative h-6 w-11 rounded-full peer-checked:bg-(--color-primary) peer-checked:after:translate-x-full peer-checked:after:border-(--color-senary) rtl:peer-checked:after:-translate-x-full"
+                class="after:content-[''] after:absolute after:top-[2px] after:start-[2px] after:h-5 after:w-5 after:rounded-full after:border-2 after:border-(--color-senary) after:bg-(--color-senary) after:transition-all bg-(--color-secondary) relative h-6 w-11 rounded-full peer-checked:bg-(--color-primary) peer-checked:after:translate-x-full peer-checked:after:border-(--color-senary) rtl:peer-checked:after:-translate-x-full"
               ></div>
             </label>
-
             <div class="flex flex-col gap-2">
               <label for="price">Prix (en euros)*</label>
               <input
-                class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="price"
                 name="price"
                 placeholder="Prix"
-                value="10"
                 required
                 type="number"
+                value="10"
               />
             </div>
-
             <div class="flex flex-col gap-2">
               <label for="organism">Organisme*</label>
               <input
-                class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="organism"
                 name="organism"
                 placeholder="Organisme"
                 required
-                value="Médecins sans frontières"
                 type="text"
+                value="Médecins sans frontières"
               />
             </div>
-
             <input
-              class="border-1 cursor-pointer rounded-sm border-[#ffffff] bg-(--color-primary) px-3 py-2 text-[#ffffff] hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) w-fit"
+              class="border-1 bg-(--color-primary) border-[#ffffff] cursor-pointer hover:border-1 hover:border-(--color-primary) hover:bg-transparent hover:text-(--color-primary) px-3 py-2 rounded-sm text-[#ffffff] w-fit"
               id="send"
               name="send"
               type="submit"

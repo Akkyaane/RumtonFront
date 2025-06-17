@@ -16,9 +16,9 @@
         ><img
           alt="Logo de l'application Rumton"
           class="w-[100px]"
-          src="../../../content/logos/logo.svg"
+          src="../../content/logos/logo.svg"
       /></a>
-      <nav class="flex items-center gap-8">
+      <nav class="flex gap-8 items-center">
         <ul class="flex gap-4">
           <li><a class="link" href="#home">Accueil</a></li>
           <li><a class="link" href="#concept">Concept</a></li>
@@ -28,7 +28,7 @@
         <ul class="flex gap-4">
           <li>
             <a
-              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary)"
               href="./dashboard.html"
               id="sign-in-btn"
               >Se connecter</a
@@ -36,7 +36,7 @@
           </li>
           <li>
             <a
-              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary)"
               id="sign-up-btn"
               >S'inscrire</a
             >
@@ -59,7 +59,7 @@
             <div class="flex flex-col gap-2">
               <label for="email">E-mail*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="email"
                 name="email"
                 placeholder="john.doe@exemple.com"
@@ -70,7 +70,7 @@
             <div class="flex flex-col gap-2">
               <label for="password">Mot de passe*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="password"
                 name="password"
                 required
@@ -81,7 +81,7 @@
               >Mot de passe oublié ?</a
             >
             <input
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               id="send"
               name="send"
               type="submit"
@@ -106,7 +106,7 @@
             <div class="flex flex-col gap-2">
               <label for="email">E-mail*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="email"
                 name="email"
                 placeholder="john.doe@exemple.com"
@@ -115,7 +115,7 @@
               />
             </div>
             <input
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               id="send"
               name="send"
               type="submit"
@@ -137,7 +137,7 @@
             <div class="flex flex-col gap-2">
               <label for="password">Mot de passe*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="password"
                 name="password"
                 required
@@ -147,7 +147,7 @@
             <div class="flex flex-col gap-2">
               <label for="password-check">Confirmation du mot de passe*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="password-check"
                 name="password-check"
                 required
@@ -155,7 +155,7 @@
               />
             </div>
             <input
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               id="send"
               name="send"
               type="submit"
@@ -177,7 +177,7 @@
             <div class="flex flex-col gap-2">
               <label for="nickname">Pseudonyme*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="nickname"
                 name="nickname"
                 placeholder="john00"
@@ -188,7 +188,7 @@
             <div class="flex flex-col gap-2">
               <label for="firstname">Prénom*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="firstname"
                 name="firstname"
                 placeholder="John"
@@ -199,7 +199,7 @@
             <div class="flex flex-col gap-2">
               <label for="lastname">Nom*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="lastname"
                 name="lastname"
                 placeholder="Doe"
@@ -210,7 +210,7 @@
             <div class="flex flex-col gap-2">
               <label for="sex">Sexe*</label>
               <select
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus:outline-2 focus:outline-(--color-primary)"
+                class="focus:outline-2 focus:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="sex"
                 name="sex"
                 required
@@ -226,7 +226,7 @@
             <div class="flex flex-col gap-2">
               <label for="birthdate">Date de naissance*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="birthdate"
                 name="birthdate"
                 placeholder="Doe"
@@ -237,7 +237,7 @@
             <div class="flex flex-col gap-2">
               <label for="zip">Code postal*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="zip"
                 name="zip"
                 placeholder="69007"
@@ -248,7 +248,7 @@
             <div class="flex flex-col gap-2">
               <label for="email">E-mail*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="email"
                 name="email"
                 placeholder="john.doe@exemple.com"
@@ -259,7 +259,7 @@
             <div class="flex flex-col gap-2">
               <label for="email-check">Confirmation de l'e-mail*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="email-check"
                 name="email-check"
                 placeholder="john.doe@exemple.com"
@@ -270,7 +270,7 @@
             <div class="flex flex-col gap-2">
               <label for="password">Mot de passe*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="password"
                 name="password"
                 required
@@ -280,7 +280,7 @@
             <div class="flex flex-col gap-2">
               <label for="password-check">Confirmation du mot de passe*</label>
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 id="password-check"
                 name="password-check"
                 required
@@ -288,7 +288,7 @@
               />
             </div>
             <input
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               id="send"
               name="send"
               type="submit"
@@ -310,19 +310,19 @@
         <h1 class="outfit-header text-3xl">
           Rejoignez une explosion de couleurs, de fun et d'énergie !
         </h1>
-        <p class="w-2xl text-center text-lg">
+        <p class="text-center text-lg w-2xl">
           La Color Run, c'est bien plus qu'une course : c'est une fête où chaque
           kilomètre devient un arc-en-ciel de bonheur. Que vous soyez coureur
           aguerri ou amateur de bonne humeur, vous êtes au bon endroit.
         </p>
         <div class="flex gap-4">
           <a
-            class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:border-2 hover:border-(--color-senary) hover:text-(--color-senary)"
+            class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer hover:border-2 hover:border-(--color-senary) hover:text-(--color-senary) px-3 py-2 rounded-sm text-(--color-senary)"
             href="./runs.html"
             >Découvrir les courses</a
           >
           <a
-            class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:border-2 hover:border-(--color-senary) hover:text-(--color-senary)"
+            class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer hover:border-2 hover:border-(--color-senary) hover:text-(--color-senary) px-3 py-2 rounded-sm text-(--color-senary)"
             >Inscrivez-vous maintenant</a
           >
         </div>
@@ -331,11 +331,11 @@
         <h2 class="outfit-header text-2xl text-(--color-primary)">
           Découvrez le concept de la Color Run
         </h2>
-        <div class="flex items-center gap-10">
+        <div class="flex gap-10 items-center">
           <img
             alt="Photo d'illustration de la Color Run"
             class="rounded-sm shadow w-[500px]"
-            src="../../../content/pictures/picture-2.webp"
+            src="../../content/pictures/picture-2.webp"
           />
           <div class="flex flex-col gap-4 text-lg">
             <p class="w-xl">
@@ -364,7 +364,7 @@
         <h2 class="outfit-header text-2xl text-(--color-primary)">
           Nos prochaines étapes colorées
         </h2>
-        <p class="w-xl text-center text-lg">
+        <p class="text-center text-lg w-xl">
           La Color Run voyage dans toute la France ! Voici les villes où nous
           poserons nos valises prochainement :
         </p>
@@ -377,7 +377,7 @@
             />
             <p class="text-lg">Lyon : Dim. 12 mai 2025</p>
             <a
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               href="../general/runs.html"
               >Participer</a
             >
@@ -390,7 +390,7 @@
             />
             <p class="text-lg">Bordeaux : Sam. 8 juin 2025</p>
             <a
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               href="../general/runs.html"
               >Participer</a
             >
@@ -403,7 +403,7 @@
             />
             <p class="text-lg">Paris : Dim. 22 sept. 2025</p>
             <a
-              class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+              class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
               href="../general/runs.html"
               >Participer</a
             >
@@ -413,7 +413,7 @@
           >Consulter plus d'événements</a
         >
       </section>
-      <section class="flex justify-center gap-10 py-10" id="join">
+      <section class="flex gap-10 justify-center py-10" id="join">
         <img
           alt=""
           class="rounded-sm shadow w-[500px]"
@@ -444,12 +444,12 @@
             partagent cette aventure incroyable !
           </p>
           <a
-            class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+            class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
             >S'inscrire maintenant</a
           >
         </div>
       </section>
-      <section class="flex justify-center gap-10 py-10" id="volunteer">
+      <section class="flex gap-10 justify-center py-10" id="volunteer">
         <div class="flex flex-col gap-3 h-px text-lg w-3xl">
           <h2 class="outfit-header text-2xl text-(--color-primary)">
             Devenez un héros de la Color Run
@@ -472,7 +472,7 @@
             précieuse !
           </p>
           <a
-            class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+            class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
             href="#"
             >Rejoindre l'équipe bénévole</a
           >
@@ -486,13 +486,13 @@
     </main>
 
     <footer class="flex flex-col items-center py-10">
-      <div class="flex w-full items-center justify-between">
+      <div class="flex items-center justify-between w-full">
         <div class="flex flex-col gap-2">
           <a href="./index.html"
             ><img
               alt="Logo de l'application Rumton"
               class="w-[100px]"
-              src="../../../content/logos/logo.svg"
+              src="../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
         </div>
@@ -511,28 +511,28 @@
                 <img
                   alt="Logo de l'application Instagram"
                   class="size-[25px]"
-                  src="../../../content/logos/instagram-logo.svg"
+                  src="../../content/logos/instagram-logo.svg"
                 />
               </a>
               <a href="https://x.com/">
                 <img
                   alt="Logo de l'application X"
                   class="size-[25px]"
-                  src="../../../content/logos/x-logo.svg"
+                  src="../../content/logos/x-logo.svg"
                 />
               </a>
               <a href="https://www.facebook.com/?locale=fr_FR">
                 <img
                   alt="Logo de l'application Facebook"
                   class="size-[25px]"
-                  src="../../../content/logos/facebook-logo.svg"
+                  src="../../content/logos/facebook-logo.svg"
                 />
               </a>
               <a href="https://www.youtube.com/">
                 <img
                   alt="Logo de l'application YouTube"
                   class="size-[25px]"
-                  src="../../../content/logos/youtube-logo.svg"
+                  src="../../content/logos/youtube-logo.svg"
                 />
               </a>
             </div>
@@ -544,13 +544,13 @@
             >
             <div class="flex flex-col gap-2">
               <input
-                class="rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                 name="email"
                 placeholder="john.doe@example.com"
                 type="email"
               />
               <input
-                class="w-fit bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer px-3 py-2 rounded-sm text-(--color-senary) hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary)"
+                class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-fit"
                 type="submit"
                 value="S'inscrire"
               />
