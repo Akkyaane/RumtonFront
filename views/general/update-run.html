@@ -33,65 +33,123 @@
     </header>
 
     <main class="flex flex-1 gap-6">
-      <nav
-        class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
-      >
-        <ul class="flex flex-col gap-8">
-          <li class="flex items-center gap-2 text-(--color-secondary)">
-            <img
-              alt="Icône de la section 'Mon tableau de bord'"
-              class="size-[20px]"
-              src="../../content/icons/board-icon.svg"
-            />
-            <a class="link text-lg" href="./dashboard.html"
-              >Mon tableau de bord</a
-            >
-          </li>
-          <li class="flex items-center gap-2 text-(--color-secondary)">
-            <img
-              alt="Icône de la section 'Mes participations'"
-              class="size-[20px]"
-              src="../../content/icons/runner-icon.svg"
-            />
-            <a class="link text-lg" href="./my-participations.html"
-              >Mes participations</a
-            >
-          </li>
-          <li class="flex items-center gap-2 text-(--color-secondary)">
-            <img
-              alt="Icône de la section 'Mes courses'"
-              class="size-[20px]"
-              src="../../content/icons/flag-icon.svg"
-            />
-            <a class="link text-lg" href="../specific/host/host-my-runs.html"
-              >Mes courses</a
-            >
-          </li>
-          <li class="flex items-center gap-2 text-(--color-secondary)">
-            <img
-              alt="Icône de la section 'Mes informations'"
-              class="size-[20px]"
-              src="../../content/icons/user-icon.svg"
-            />
-            <a class="link text-lg" href="./profile.html">Mes informations</a>
-          </li>
-        </ul>
-        <ul>
-          <li class="flex items-center gap-2 text-(--color-secondary)">
-            <img
-              alt="Icône de la section 'Se déconnecter'"
-              class="size-[20px]"
-              src="../../content/icons/logout-icon.svg"
-            />
-            <a class="link text-lg" href="#">Me déconnecter</a>
-          </li>
-        </ul>
-      </nav>
+      <div class="flex flex-col gap-4">
+        <nav
+          class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+        >
+          <ul class="flex flex-col gap-8">
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Mon tableau de bord'"
+                class="size-[20px]"
+                src="../../content/icons/board-icon.svg"
+              />
+              <a class="link text-lg" href="./dashboard.html"
+                >Mon tableau de bord</a
+              >
+            </li>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Mes participations'"
+                class="size-[20px]"
+                src="../../content/icons/runner-icon.svg"
+              />
+              <a class="link text-lg" href="./my-participations.html"
+                >Mes participations</a
+              >
+            </li>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Mes courses'"
+                class="size-[20px]"
+                src="../../content/icons/flag-icon.svg"
+              />
+              <a class="link text-lg" href="../specific/host/host-my-runs.html"
+                >Mes courses</a
+              >
+            </li>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Mes informations'"
+                class="size-[20px]"
+                src="../../content/icons/user-icon.svg"
+              />
+              <a class="link text-lg" href="./profile.html">Mes informations</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Se déconnecter'"
+                class="size-[20px]"
+                src="../../content/icons/logout-icon.svg"
+              />
+              <a class="link text-lg" href="#">Me déconnecter</a>
+            </li>
+          </ul>
+        </nav>
+        <nav
+          class="bg-(--color-quaternary) flex h-[400px] justify-between px-8 py-12 rounded-sm shadow flex-col"
+        >
+          <ul class="flex flex-col gap-8">
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Mon tableau de bord'"
+                class="size-[20px]"
+                src="../../content/icons/board-icon.svg"
+              />
+              <a
+                class="link text-lg"
+                href="../specific/administrator/administrator-dashboard.html"
+                >Mon tableau de bord</a
+              >
+            </li>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Utilisateurs'"
+                class="size-[20px]"
+                src="../../content/icons/users-icon.svg"
+              />
+              <a
+                class="link text-lg"
+                href="../specific/administrator/administrator-users.html"
+                >Utilisateurs</a
+              >
+            </li>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Courses'"
+                class="size-[20px]"
+                src="../../content/icons/flag-icon.svg"
+              />
+              <a class="link text-lg" href="./runs.html">Courses</a>
+            </li>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Mes informations'"
+                class="size-[20px]"
+                src="../../content/icons/user-icon.svg"
+              />
+              <a class="link text-lg" href="./profile.html">Mes informations</a>
+            </li>
+          </ul>
+          <ul>
+            <li class="flex items-center gap-2 text-(--color-secondary)">
+              <img
+                alt="Icône de la section 'Se déconnecter'"
+                class="size-[20px]"
+                src="../../content/icons/logout-icon.svg"
+              />
+              <a class="link text-lg" href="#">Me déconnecter</a>
+            </li>
+          </ul>
+        </nav>
+      </div>
       <div class="flex flex-1 flex-col gap-6">
         <section
           class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit"
         >
-                  <a
+          <a
             href="../general/dashboard.html"
             class="link flex w-fit items-center font-medium text-(--color-primary)"
             ><img
@@ -211,7 +269,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia m
             ><img
               alt="Logo de l'application Rumton"
               class="w-[100px]"
-              src="../../../content/logos/logo.svg"
+              src="../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
         </div>
