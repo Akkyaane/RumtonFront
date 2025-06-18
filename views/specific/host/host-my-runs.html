@@ -190,8 +190,8 @@
             /></a>
           </div>
           <div class="flex flex-col items-center justify-center gap-8">
-            <div class="flex justify-between w-full flex-wrap">
-              <div class="flex flex-col gap-2 p-4">
+            <div class="flex flex-wrap gap-10 w-full items-container">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -260,7 +260,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -329,7 +329,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -398,7 +398,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -467,7 +467,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -536,7 +536,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -605,7 +605,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -674,7 +674,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -743,7 +743,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -812,7 +812,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -881,7 +881,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -950,7 +950,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -1019,7 +1019,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -1088,7 +1088,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -1157,7 +1157,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -1226,7 +1226,7 @@
                   </ul>
                 </div>
               </div>
-              <div class="flex flex-col gap-2 p-4">
+              <div class="flex flex-col gap-2 p-4 item">
                 <div class="flex relative">
                   <img
                     alt="Plan de la course"
@@ -1295,6 +1295,23 @@
                   </ul>
                 </div>
               </div>
+            </div>
+            <div class="pagination flex items-center font-medium">
+              <button onclick="changePage(currentPage - 1)">
+                <img
+                  alt="Icône du bouton 'En savoir plus'"
+                  class="cursor-pointer rotate-180 size-[25px]"
+                  src="../../../content/icons/arrow-icon.svg"
+                />
+              </button>
+              <span class="text-lg px-2" id="page-number"></span>
+              <button onclick="changePage(currentPage + 1)">
+                <img
+                  alt="Icône du bouton 'En savoir plus'"
+                  class="cursor-pointer size-[25px]"
+                  src="../../../content/icons/arrow-icon.svg"
+                />
+              </button>
             </div>
           </div>
           <button
@@ -1401,6 +1418,6 @@
         }
       });
     </script> -->
-    <script src="../../js/main.js"></script>
+    <script src="../../../js/main.js"></script>
   </body>
 </html>
