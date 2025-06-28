@@ -9,13 +9,13 @@
   </head>
 
   <body
-    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) max-w-(--size-1440) max-lg:text-sm px-4"
   >
     <header class="flex items-center justify-between py-4">
       <a href="./index.html">
         <img
           alt="Logo de l'application Rumton"
-          class="w-[100px]"
+          class="w-[100px] max-lg:w-[90px]"
           src="../../content/logos/logo.svg"
         />
       </a>
@@ -39,50 +39,58 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mon tableau de bord'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/board-icon.svg"
               />
-              <a class="link text-lg" href="./dashboard.html"
+              <a class="link text-lg max-lg:text-base" href="./dashboard.html"
                 >Mon tableau de bord</a
               >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes participations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/runner-icon.svg"
               />
-              <a class="link text-lg" href="./my-participations.html"
+              <a
+                class="link text-lg max-lg:text-base"
+                href="./my-participations.html"
                 >Mes participations</a
               >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes courses'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/flag-icon.svg"
               />
-              <a class="link text-lg" href="../specific/host/host-my-runs.html"
+              <a
+                class="link text-lg max-lg:text-base"
+                href="../specific/host/host-my-runs.html"
                 >Mes courses</a
               >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes informations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/user-icon.svg"
               />
-              <a class="link text-lg" href="./profile.html">Mes informations</a>
+              <a class="link text-lg max-lg:text-base" href="./profile.html"
+                >Mes informations</a
+              >
             </li>
           </ul>
           <ul>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Se déconnecter'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/logout-icon.svg"
               />
-              <a class="link text-lg" href="#">Me déconnecter</a>
+              <a class="link text-lg max-lg:text-base" href="#"
+                >Me déconnecter</a
+              >
             </li>
           </ul>
         </nav>
@@ -93,11 +101,11 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mon tableau de bord'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/board-icon.svg"
               />
               <a
-                class="link text-lg"
+                class="link text-lg max-lg:text-base"
                 href="../specific/administrator/administrator-dashboard.html"
                 >Mon tableau de bord</a
               >
@@ -105,11 +113,11 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Utilisateurs'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/users-icon.svg"
               />
               <a
-                class="link text-lg"
+                class="link text-lg max-lg:text-base"
                 href="../specific/administrator/administrator-users.html"
                 >Utilisateurs</a
               >
@@ -117,47 +125,55 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Courses'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/flag-icon.svg"
               />
-              <a class="link text-lg" href="./runs.html">Courses</a>
+              <a class="link text-lg max-lg:text-base" href="./runs.html"
+                >Courses</a
+              >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes informations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/user-icon.svg"
               />
-              <a class="link text-lg" href="./profile.html">Mes informations</a>
+              <a class="link text-lg max-lg:text-base" href="./profile.html"
+                >Mes informations</a
+              >
             </li>
           </ul>
           <ul>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Se déconnecter'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/logout-icon.svg"
               />
-              <a class="link text-lg" href="#">Me déconnecter</a>
+              <a class="link text-lg max-lg:text-base" href="#"
+                >Me déconnecter</a
+              >
             </li>
           </ul>
         </nav>
       </div>
-      <div class="flex flex-1 gap-6 h-fit">
+      <div class="flex flex-1 gap-6 max-xl:flex-col">
         <section
-          class="bg-(--color-quaternary) flex flex-col gap-8 p-12 rounded-sm shadow"
+          class="bg-(--color-quaternary) flex flex-col gap-8 p-12 rounded-sm shadow max-xl:w-fit h-fit"
         >
           <a
             class="flex font-medium items-center link text-(--color-primary) w-fit"
             href="../general/dashboard.html"
             ><img
               alt="Icône du bouton 'Retour'"
-              class="rotate-180 size-[20px]"
+              class="rotate-180 size-[20px] max-lg:size-[15px]"
               src="../../content/icons/arrow-icon.svg"
             />Retour</a
           >
           <div class="flex items-center justify-between">
-            <h2 class="text-(--color-secondary) text-xl font-bold uppercase">
+            <h2
+              class="text-(--color-secondary) text-xl font-bold uppercase max-lg:text-lg"
+            >
               Run in Lyon
             </h2>
             <button
@@ -178,10 +194,10 @@
           </div>
           <img
             alt="Plan de la course"
-            class="border-2 border-(--color-quinary) h-[300px] object-center object-cover rounded-sm w-[500px]"
+            class="border-2 border-(--color-quinary) h-[300px] object-center object-cover rounded-sm w-[500px] max-md:w-full max-lg:h-[200px]"
             src="../../content/pictures/exemple-carte.webp"
           />
-          <p class="w-[500px]">
+          <p class="w-[500px] max-lg:w-full">
             Lorem ipsum dolor sit amet, consectetur adipiscing elit. Ut et massa
             mi. Aliquam in hendrerit urna. Pellentesque sit amet sapien
             fringilla, mattis ligula consectetur, ultrices mauris. Maecenas
@@ -192,12 +208,12 @@
             vel euismod erat placerat. In iaculis arcu eros, eget tempus orci
             facilisis id.
           </p>
-          <div class="flex justify-between">
+          <div class="flex justify-between max-md:flex-col">
             <div class="flex flex-col gap-4">
               <div class="flex items-center gap-2">
                 <img
                   alt="Photo de profil"
-                  class="rounded-[50%] size-[50px]"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
                   src="../../content/pictures/picture-5.webp"
                 />
                 john00
@@ -206,49 +222,49 @@
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Date'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/calendar-icon.svg"
                   />18 août 2025 - 08h40
                 </li>
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Lieu'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/location-icon.svg"
                   />Lyon, France
                 </li>
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Distance'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/distance-icon.svg"
                   />35.7 km
                 </li>
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Participants'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/users-icon.svg"
                   />21
                 </li>
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Obstacles'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/energy-icon.svg"
                   />Sans obstacles
                 </li>
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Prix'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/euro-icon.svg"
                   />10
                 </li>
                 <li class="flex items-center gap-2 text-(--color-secondary)">
                   <img
                     alt="Icône du champ 'Organisme'"
-                    class="size-[20px]"
+                    class="size-[20px] max-lg:size-[15px]"
                     src="../../content/icons/organism-icon.svg"
                   />Médecins sans frontières
                 </li>
@@ -270,10 +286,12 @@
               >
             </div>
             <div
-              class="bg-(--color-senary) border-2 border-(--color-quinary) px-3 py-4"
+              class="bg-(--color-senary) border-2 border-(--color-quinary) px-3 py-4 max-lg:mt-4"
             >
               <form action="">
-                <div class="flex justify-center relative w-[250px]">
+                <div
+                  class="flex justify-center relative w-[250px] max-lg:w-full"
+                >
                   <input
                     class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
                     placeholder="Rechercher..."
@@ -281,52 +299,60 @@
                   />
                   <img
                     alt="Rechercher"
-                    class="pointer-events-none absolute right-4 top-1/2 size-[20px] transform -translate-y-1/2"
+                    class="pointer-events-none absolute right-4 top-1/2 size-[20px] max-lg:size-[15px] transform translate-y-1/2"
                     src="../../content/icons/magnifying-glass-icon.svg"
                   />
                 </div>
               </form>
               <ul class="flex flex-col gap-2 mx-6 my-4 px-2">
                 <li class="flex items-center gap-2 p-1">
-                  <span class="hide text-2xl">&times;</span> john00
+                  <span class="hide text-2xl max-lg:text-xl">&times;</span>
+                  john00
                 </li>
                 <li class="flex items-center gap-2 p-1">
-                  <span class="hide text-2xl">&times;</span> john00
+                  <span class="hide text-2xl max-lg:text-xl">&times;</span>
+                  john00
                 </li>
                 <li class="flex items-center gap-2 p-1">
-                  <span class="hide text-2xl">&times;</span> john00
+                  <span class="hide text-2xl max-lg:text-xl">&times;</span>
+                  john00
                 </li>
                 <li class="flex items-center gap-2 p-1">
-                  <span class="hide text-2xl">&times;</span> john00
+                  <span class="hide text-2xl max-lg:text-xl">&times;</span>
+                  john00
                 </li>
                 <li class="flex items-center gap-2 p-1">
-                  <span class="hide text-2xl">&times;</span> john00
+                  <span class="hide text-2xl max-lg:text-xl">&times;</span>
+                  john00
                 </li>
                 <li class="flex items-center gap-2 p-1">
-                  <span class="hide text-2xl">&times;</span> john00
+                  <span class="hide text-2xl max-lg:text-xl">&times;</span>
+                  john00
                 </li>
               </ul>
             </div>
           </div>
         </section>
 
-        <section class="flex flex-col justify-between px-6 pt-12 w-full">
+        <section
+          class="flex flex-col justify-between px-6 pt-12 max-lg:pt-6 h-5/6 max-2xl:w-full"
+        >
           <p class="hide text-center">
             Veuillez vous inscrire à la course pour accéder au fil de
             discussion.
           </p>
-          <ul class="flex flex-col gap-8">
+          <ul class="flex flex-col gap-8 overflow-y-auto max-xl:pb-6">
             <li class="flex flex-col gap-4">
               <div class="flex items-center gap-2 text-(--color-secondary)">
                 <img
                   alt="Photo de profil"
-                  class="rounded-[50%] size-[50px]"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
                   src="../../content/pictures/picture-5.webp"
                 />
                 <p>john00</p>
               </div>
               <div class="flex items-top gap-3">
-                <span class="text-3xl">&times;</span>
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
                 <div class="flex flex-col gap-3">
                   <p
                     class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
@@ -342,13 +368,13 @@
               <div class="flex items-center gap-2 text-(--color-secondary)">
                 <img
                   alt="Photo de profil"
-                  class="rounded-[50%] size-[50px]"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
                   src="../../content/pictures/picture-5.webp"
                 />
                 <p>john00</p>
               </div>
               <div class="flex items-top gap-3">
-                <span class="text-3xl">&times;</span>
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
                 <div class="flex flex-col gap-3">
                   <p
                     class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
@@ -359,7 +385,7 @@
                 </div>
               </div>
               <div class="flex items-top gap-3">
-                <span class="text-3xl">&times;</span>
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
                 <div class="flex flex-col gap-3">
                   <p
                     class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
@@ -375,13 +401,13 @@
               <div class="flex items-center gap-2 text-(--color-secondary)">
                 <img
                   alt="Photo de profil"
-                  class="rounded-[50%] size-[50px]"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
                   src="../../content/pictures/picture-5.webp"
                 />
                 <p>john00</p>
               </div>
               <div class="flex items-top gap-3">
-                <span class="text-3xl">&times;</span>
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
                 <div class="flex flex-col gap-3">
                   <p
                     class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
@@ -396,13 +422,59 @@
               <div class="flex items-center gap-2 text-(--color-secondary)">
                 <img
                   alt="Photo de profil"
-                  class="rounded-[50%] size-[50px]"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
                   src="../../content/pictures/picture-5.webp"
                 />
                 <p>john00</p>
               </div>
               <div class="flex items-top gap-3">
-                <span class="text-3xl">&times;</span>
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
+                <div class="flex flex-col gap-3">
+                  <p
+                    class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ratione pariatur, praesentium, repellat asperiores ab
+                    doloribus dolorum hic temporibus iusto ducimus.
+                  </p>
+                  <p class="text-xs">21h36</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col gap-4">
+              <div class="flex items-center gap-2 text-(--color-secondary)">
+                <img
+                  alt="Photo de profil"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
+                  src="../../content/pictures/picture-5.webp"
+                />
+                <p>john00</p>
+              </div>
+              <div class="flex items-top gap-3">
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
+                <div class="flex flex-col gap-3">
+                  <p
+                    class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
+                  >
+                    Lorem ipsum dolor sit amet consectetur adipisicing elit.
+                    Ratione pariatur, praesentium, repellat asperiores ab
+                    doloribus dolorum hic temporibus iusto ducimus.
+                  </p>
+                  <p class="text-xs">21h36</p>
+                </div>
+              </div>
+            </li>
+            <li class="flex flex-col gap-4">
+              <div class="flex items-center gap-2 text-(--color-secondary)">
+                <img
+                  alt="Photo de profil"
+                  class="rounded-[50%] size-[50px] max-lg:size-[40px]"
+                  src="../../content/pictures/picture-5.webp"
+                />
+                <p>john00</p>
+              </div>
+              <div class="flex items-top gap-3">
+                <span class="text-3xl max-lg:text-2xl">&times;</span>
                 <div class="flex flex-col gap-3">
                   <p
                     class="bg-(--color-senary) outline-1 outline-(--color-quinary) px-4 py-2 rounded-sm w-fit"
@@ -421,7 +493,7 @@
             action=""
           >
             <input
-              class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm w-[350px]"
+              class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm w-[350px] max-lg:w-full"
               id="message"
               name="message"
               placeholder="Écrire un message..."
@@ -429,7 +501,7 @@
             />
             <img
               alt="Icône du bouton 'Envoyer'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/plane-icon.svg"
             />
           </form>
@@ -443,7 +515,7 @@
           <a href="./index.html"
             ><img
               alt="Logo de l'application Rumton"
-              class="w-[100px]"
+              class="w-[100px] max-lg:w-[90px]"
               src="../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
@@ -468,28 +540,28 @@
             <a href="https://www.instagram.com/">
               <img
                 alt="Logo de l'application Instagram"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/instagram-logo.svg"
               />
             </a>
             <a href="https://x.com/">
               <img
                 alt="Logo de l'application X"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/x-logo.svg"
               />
             </a>
             <a href="https://www.facebook.com/?locale=fr_FR">
               <img
                 alt="Logo de l'application Facebook"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/facebook-logo.svg"
               />
             </a>
             <a href="https://www.youtube.com/">
               <img
                 alt="Logo de l'application YouTube"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/youtube-logo.svg"
               />
             </a>
