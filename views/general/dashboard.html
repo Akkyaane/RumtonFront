@@ -9,13 +9,13 @@
   </head>
 
   <body
-    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) max-w-(--size-1440) max-lg:text-sm px-4"
   >
     <header class="flex items-center justify-between py-4">
       <a href="./index.html">
         <img
           alt="Logo de l'application Rumton"
-          class="w-[100px]"
+          class="w-[100px] max-lg:w-[90px]"
           src="../../content/logos/logo.svg"
         />
       </a>
@@ -38,89 +38,90 @@
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mon tableau de bord'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/board-icon.svg"
             />
-            <a class="link text-lg" href="./dashboard.html"
+            <a class="link text-lg max-lg:text-base" href="./dashboard.html"
               >Mon tableau de bord</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mes participations'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/runner-icon.svg"
             />
-            <a class="link text-lg" href="./my-participations.html"
+            <a
+              class="link text-lg max-lg:text-base"
+              href="./my-participations.html"
               >Mes participations</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mes courses'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/flag-icon.svg"
             />
-            <a class="link text-lg" href="../specific/host/host-my-runs.html"
+            <a
+              class="link text-lg max-lg:text-base"
+              href="../specific/host/host-my-runs.html"
               >Mes courses</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mes informations'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/user-icon.svg"
             />
-            <a class="link text-lg" href="./profile.html">Mes informations</a>
+            <a class="link text-lg max-lg:text-base" href="./profile.html"
+              >Mes informations</a
+            >
           </li>
         </ul>
         <ul>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Se déconnecter'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/logout-icon.svg"
             />
-            <a class="link text-lg" href="#">Me déconnecter</a>
+            <a class="link text-lg max-lg:text-base" href="#">Me déconnecter</a>
           </li>
         </ul>
       </nav>
       <div class="flex flex-1 flex-col gap-6">
-        <div class="flex gap-6">
+        <div class="flex gap-6 max-lg:flex-col">
           <section
             class="bg-(--color-quaternary) flex flex-1 flex-col gap-8 h-fit p-12 rounded-sm shadow"
           >
-            <h2 class="outfit-header text-(--color-primary) text-xl">
+            <h2
+              class="outfit-header text-(--color-primary) text-xl max-lg:text-lg"
+            >
               Mes prochaines participations
             </h2>
-            <div class="flex flex-col items-center justify-center gap-4">
+            <div class="flex flex-col items-center justify-center gap-4 hide">
               <p>Aucune participation en cours.</p>
               <a
                 class="flex items-center link text-(--color-primary) font-medium w-fit"
                 href="./runs.html"
                 >Participer à une course<img
                   alt="Icône du bouton 'Participer à une course'"
-                  class="size-[20px]"
+                  class="size-[20px] max-lg:size-[15px]"
                   src="../../content/icons/arrow-icon.svg"
               /></a>
             </div>
-            <div class="flex justify-between w-full">
+            <div class="flex justify-between w-full flex-wrap">
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -130,7 +131,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -139,7 +140,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -148,7 +149,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -157,7 +158,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -167,7 +168,7 @@
                         href="./run.html"
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -175,21 +176,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -199,7 +193,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -208,7 +202,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -217,7 +211,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -226,7 +220,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -236,7 +230,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -244,21 +238,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -268,7 +255,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -277,7 +264,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -286,7 +273,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -295,7 +282,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -305,7 +292,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -318,53 +305,47 @@
               href="../general/my-participations.html"
               >Consulter toutes mes participations<img
                 alt="Icône du bouton 'Consulter toutes mes participations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/arrow-icon.svg"
             /></a>
           </section>
           <section
-            class="bg-(--color-quaternary) flex flex-0 flex-col gap-8 p-12 rounded-sm shadow text-center"
+            class="bg-(--color-quaternary) flex flex-0 flex-col gap-8 p-12 rounded-sm shadow text-center h-fit"
           >
             <h2
-              class="outfit-header text-(--color-primary) text-nowrap text-xl"
+              class="outfit-header text-(--color-primary) text-nowrap text-xl max-lg:text-lg max-lg:text-left"
             >
               Mes statistiques
             </h2>
             <ul class="flex flex-col gap-4">
               <li>
                 <ul>
-                  <li><em class="text-3xl">0</em></li>
-                  <li class="text-sm">courses réalisées</li>
+                  <li><em class="text-3xl max-lg:text-2xl">0</em></li>
+                  <li class="text-sm max-lg:text-xs">courses réalisées</li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li><em class="text-3xl">0</em></li>
-                  <li class="text-sm">courses likées</li>
+                  <li><em class="text-3xl max-lg:text-2xl">0</em></li>
+                  <li class="text-sm max-lg:text-xs">Plus haute place</li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li><em class="text-3xl">0</em></li>
-                  <li class="text-sm">Plus haute place</li>
+                  <li><em class="text-3xl max-lg:text-2xl">0</em></li>
+                  <li class="text-sm max-lg:text-xs">villes visitées</li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li><em class="text-3xl">0</em></li>
-                  <li class="text-sm">villes visitées</li>
+                  <li><em class="text-3xl max-lg:text-2xl">0</em></li>
+                  <li class="text-sm max-lg:text-xs">organismes soutenus</li>
                 </ul>
               </li>
               <li>
                 <ul>
-                  <li><em class="text-3xl">0</em></li>
-                  <li class="text-sm">organismes soutenus</li>
-                </ul>
-              </li>
-              <li>
-                <ul>
-                  <li><em class="text-3xl">0</em></li>
-                  <li class="text-sm">km parcourus</li>
+                  <li><em class="text-3xl max-lg:text-2xl">0</em></li>
+                  <li class="text-sm max-lg:text-xs">km parcourus</li>
                 </ul>
               </li>
             </ul>
@@ -373,38 +354,33 @@
         <section
           class="bg-(--color-quaternary) flex flex-col gap-8 justify-between p-12 rounded-sm shadow"
         >
-          <h2 class="outfit-header text-(--color-primary) text-xl">
+          <h2
+            class="outfit-header text-(--color-primary) text-xl max-lg:text-lg"
+          >
             Mes prochaines courses
           </h2>
-          <div class="flex flex-col items-center justify-center gap-4">
+          <div class="flex flex-col items-center justify-center gap-4 hide">
             <p>Aucune course organisée.</p>
             <a
               class="flex items-center link text-(--color-primary) font-medium w-fit"
               href="../specific/host/host-create-run.html"
               >Organiser une course<img
                 alt="Icône du bouton 'Organiser une course'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/arrow-icon.svg"
             /></a>
           </div>
           <div class="flex flex-col items-center justify-center gap-8">
-            <div class="flex justify-between w-full">
+            <div class="flex justify-between w-full flex-wrap">
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -414,7 +390,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -423,7 +399,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -432,7 +408,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -441,7 +417,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -451,7 +427,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -459,21 +435,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -483,7 +452,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -492,7 +461,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -501,7 +470,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -510,7 +479,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -520,7 +489,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -528,21 +497,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -552,7 +514,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -561,7 +523,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -570,7 +532,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -579,7 +541,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -589,7 +551,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -597,21 +559,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -621,7 +576,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -630,7 +585,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -639,7 +594,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -648,7 +603,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -658,7 +613,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -672,45 +627,40 @@
             href="../specific/host/host-my-runs.html"
             >Consulter toutes mes courses<img
               alt="Icône du bouton 'Consulter toutes mes courses'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/arrow-icon.svg"
           /></a>
         </section>
         <section
           class="bg-(--color-quaternary) flex flex-col gap-8 justify-between p-12 rounded-sm shadow"
         >
-          <h2 class="outfit-header text-(--color-primary) text-xl">
+          <h2
+            class="outfit-header text-(--color-primary) text-xl max-lg:text-lg"
+          >
             Les courses près de chez moi !
           </h2>
-          <div class="flex flex-col items-center justify-center gap-4">
+          <div class="flex flex-col items-center justify-center gap-4 hide">
             <p>Aucune course près de chez moi.</p>
             <a
               class="flex items-center link text-(--color-primary) font-medium w-fit"
               href="../general/runs.html"
               >Consulter toutes les courses<img
                 alt="Icône du bouton 'Consulter toutes les courses'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/arrow-icon.svg"
             /></a>
           </div>
           <div class="flex flex-col items-center justify-center gap-8">
-            <div class="flex justify-between w-full">
+            <div class="flex justify-between w-full flex-wrap">
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -720,7 +670,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -729,7 +679,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -738,7 +688,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -747,7 +697,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -757,7 +707,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -765,21 +715,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -789,7 +732,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -798,7 +741,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -807,7 +750,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -816,7 +759,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -826,7 +769,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -834,21 +777,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -858,7 +794,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -867,7 +803,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -876,7 +812,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -885,7 +821,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -895,7 +831,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -903,21 +839,14 @@
                 </div>
               </div>
               <div class="flex flex-col gap-2 p-4">
-                <div class="flex relative">
-                  <img
-                    alt="Plan de la course"
-                    class="outline-2 outline-(--color-quinary) rounded-sm size-[200px]"
-                    src="../../content/pictures/exemple-carte.webp"
-                  />
-                  <img
-                    alt="Icône du bouton 'J'aime'"
-                    class="absolute right-3 size-[35px] top-2"
-                    src="../../content/icons/heart-empty-icon.svg"
-                  />
-                </div>
+                <img
+                  alt="Plan de la course"
+                  class="outline-2 outline-(--color-quinary) rounded-sm size-[200px] max-lg:size-[150px]"
+                  src="../../content/pictures/exemple-carte.webp"
+                />
                 <div class="flex flex-col gap-2">
                   <h3
-                    class="font-bold text-(--color-secondary) text-xl uppercase"
+                    class="font-bold text-(--color-secondary) text-xl max-lg:text-lg uppercase"
                   >
                     Run in Lyon
                   </h3>
@@ -927,7 +856,7 @@
                     >
                       <img
                         alt="Icône du champ 'Date'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/calendar-icon.svg"
                       />18 août 2025
                     </li>
@@ -936,7 +865,7 @@
                     >
                       <img
                         alt="Icône du champ 'Lieu'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/location-icon.svg"
                       />Lyon, France
                     </li>
@@ -945,7 +874,7 @@
                     >
                       <img
                         alt="Icône du champ 'Distance'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/distance-icon.svg"
                       />35.7 km
                     </li>
@@ -954,7 +883,7 @@
                     >
                       <img
                         alt="Icône du champ 'Organisme'"
-                        class="size-[20px]"
+                        class="size-[20px] max-lg:size-[15px]"
                         src="../../content/icons/organism-icon.svg"
                       />Médecins sans frontières
                     </li>
@@ -964,7 +893,7 @@
                         href=""
                         >En savoir plus<img
                           alt="Icône du bouton 'En savoir plus'"
-                          class="size-[20px]"
+                          class="size-[20px] max-lg:size-[15px]"
                           src="../../content/icons/arrow-icon.svg"
                       /></a>
                     </li>
@@ -978,7 +907,7 @@
             href="../general/runs.html"
             >Consulter toutes les courses<img
               alt="Icône du bouton 'Consulter toutes les courses'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../content/icons/arrow-icon.svg"
           /></a>
         </section>
@@ -991,7 +920,7 @@
           <a href="./index.html"
             ><img
               alt="Logo de l'application Rumton"
-              class="w-[100px]"
+              class="w-[100px] max-lg:w-[90px]"
               src="../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
@@ -1016,28 +945,28 @@
             <a href="https://www.instagram.com/">
               <img
                 alt="Logo de l'application Instagram"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/instagram-logo.svg"
               />
             </a>
             <a href="https://x.com/">
               <img
                 alt="Logo de l'application X"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/x-logo.svg"
               />
             </a>
             <a href="https://www.facebook.com/?locale=fr_FR">
               <img
                 alt="Logo de l'application Facebook"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/facebook-logo.svg"
               />
             </a>
             <a href="https://www.youtube.com/">
               <img
                 alt="Logo de l'application YouTube"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/youtube-logo.svg"
               />
             </a>

@@ -45,13 +45,14 @@
 }
 
 .popup {
-  background-color: var(--color-f6f6f6);
+  background-color: var(--color-senary);
   height: 100%;
   position: fixed;
   right: 0%;
   top: 0%;
   width: 500px;
   z-index: 1000;
+  overflow-y: auto;
 
   .close-btn {
     color: var(--color-1accef);
