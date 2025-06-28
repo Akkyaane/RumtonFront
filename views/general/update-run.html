@@ -9,13 +9,13 @@
   </head>
 
   <body
-    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) max-w-(--size-1440) max-lg:text-sm px-4"
   >
     <header class="flex items-center justify-between py-4">
       <a href="./index.html">
         <img
           alt="Logo de l'application Rumton"
-          class="w-[100px]"
+          class="w-[100px] max-lg:w-[90px]"
           src="../../content/logos/logo.svg"
         />
       </a>
@@ -41,50 +41,50 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mon tableau de bord'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/board-icon.svg"
               />
-              <a class="link text-lg" href="./dashboard.html"
+              <a class="link text-lg max-lg:text-base" href="./dashboard.html"
                 >Mon tableau de bord</a
               >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes participations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/runner-icon.svg"
               />
-              <a class="link text-lg" href="./my-participations.html"
+              <a class="link text-lg max-lg:text-base" href="./my-participations.html"
                 >Mes participations</a
               >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes courses'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/flag-icon.svg"
               />
-              <a class="link text-lg" href="../specific/host/host-my-runs.html"
+              <a class="link text-lg max-lg:text-base" href="../specific/host/host-my-runs.html"
                 >Mes courses</a
               >
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes informations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/user-icon.svg"
               />
-              <a class="link text-lg" href="./profile.html">Mes informations</a>
+              <a class="link text-lg max-lg:text-base" href="./profile.html">Mes informations</a>
             </li>
           </ul>
           <ul>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Se déconnecter'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/logout-icon.svg"
               />
-              <a class="link text-lg" href="#">Me déconnecter</a>
+              <a class="link text-lg max-lg:text-base" href="#">Me déconnecter</a>
             </li>
           </ul>
         </nav>
@@ -95,11 +95,11 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mon tableau de bord'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/board-icon.svg"
               />
               <a
-                class="link text-lg"
+                class="link text-lg max-lg:text-base"
                 href="../specific/administrator/administrator-dashboard.html"
                 >Mon tableau de bord</a
               >
@@ -107,11 +107,11 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Utilisateurs'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/users-icon.svg"
               />
               <a
-                class="link text-lg"
+                class="link text-lg max-lg:text-base"
                 href="../specific/administrator/administrator-users.html"
                 >Utilisateurs</a
               >
@@ -119,35 +119,35 @@
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Courses'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/flag-icon.svg"
               />
-              <a class="link text-lg" href="./runs.html">Courses</a>
+              <a class="link text-lg max-lg:text-base" href="./runs.html">Courses</a>
             </li>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Mes informations'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/user-icon.svg"
               />
-              <a class="link text-lg" href="./profile.html">Mes informations</a>
+              <a class="link text-lg max-lg:text-base" href="./profile.html">Mes informations</a>
             </li>
           </ul>
           <ul>
             <li class="flex items-center gap-2 text-(--color-secondary)">
               <img
                 alt="Icône de la section 'Se déconnecter'"
-                class="size-[20px]"
+                class="size-[20px] max-lg:size-[15px]"
                 src="../../content/icons/logout-icon.svg"
               />
-              <a class="link text-lg" href="#">Me déconnecter</a>
+              <a class="link text-lg max-lg:text-base" href="#">Me déconnecter</a>
             </li>
           </ul>
         </nav>
       </div>
       <div class="flex flex-1 flex-col gap-6">
         <section
-          class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow w-fit"
+          class="bg-(--color-quaternary) flex flex-col gap-6 p-12 rounded-sm shadow w-fit max-xl:w-full"
         >
           <a
             class="link flex items-center w-fit font-medium text-(--color-primary)"
@@ -158,7 +158,7 @@
               src="../../content/icons/arrow-icon.svg"
             />Retour</a
           >
-          <h2 class="outfit-header text-xl text-(--color-primary)">
+          <h2 class="outfit-header text-xl text-(--color-primary) max-lg:text-lg">
             Éditer une course
           </h2>
           <form action="" class="flex flex-col gap-6" method="post">
@@ -176,7 +176,7 @@
             <div class="flex flex-col gap-2">
               <label for="description">Description*</label>
               <textarea
-                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) h-[219px] outline-1 outline-(--color-quinary) px-4 py-2 resize-none rounded-sm w-[350px]"
+                class="bg-(--color-senary) focus-visible:outline-2 focus-visible:outline-(--color-primary) h-[219px] outline-1 outline-(--color-quinary) px-4 py-2 resize-none rounded-sm w-[350px] max-xl:w-full"
                 id="description"
                 name="description"
                 required
@@ -280,7 +280,7 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia m
           <a href="./index.html"
             ><img
               alt="Logo de l'application Rumton"
-              class="w-[100px]"
+              class="w-[100px] max-lg:w-[90px]"
               src="../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
@@ -305,28 +305,28 @@ Lorem ipsum dolor sit amet consectetur, adipisicing elit. Reiciendis amet quia m
             <a href="https://www.instagram.com/">
               <img
                 alt="Logo de l'application Instagram"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/instagram-logo.svg"
               />
             </a>
             <a href="https://x.com/">
               <img
                 alt="Logo de l'application X"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/x-logo.svg"
               />
             </a>
             <a href="https://www.facebook.com/?locale=fr_FR">
               <img
                 alt="Logo de l'application Facebook"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/facebook-logo.svg"
               />
             </a>
             <a href="https://www.youtube.com/">
               <img
                 alt="Logo de l'application YouTube"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../content/logos/youtube-logo.svg"
               />
             </a>

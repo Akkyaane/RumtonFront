@@ -9,13 +9,13 @@
   </head>
 
   <body
-    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) max-w-(--size-1440) max-lg:text-sm px-4"
   >
     <header class="flex items-center justify-between py-4">
       <a href="../../general/index.html">
         <img
           alt="Logo de l'application Rumton"
-          class="w-[100px]"
+          class="w-[100px] max-lg:w-[90px]"
           src="../../../content/logos/logo.svg"
         />
       </a>
@@ -34,38 +34,38 @@
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mon tableau de bord'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/board-icon.svg"
             />
-            <a class="link text-lg" href="./administrator-dashboard.html"
+            <a class="link text-lg max-lg:text-base" href="./administrator-dashboard.html"
               >Mon tableau de bord</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Utilisateurs'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/users-icon.svg"
             />
-            <a class="link text-lg" href="./administrator-users.html"
+            <a class="link text-lg max-lg:text-base" href="./administrator-users.html"
               >Utilisateurs</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Courses'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/flag-icon.svg"
             />
-            <a class="link text-lg" href="../../general/runs.html">Courses</a>
+            <a class="link text-lg max-lg:text-base" href="../../general/runs.html">Courses</a>
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mes informations'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/user-icon.svg"
             />
-            <a class="link text-lg" href="../../general/profile.html"
+            <a class="link text-lg max-lg:text-base" href="../../general/profile.html"
               >Mes informations</a
             >
           </li>
@@ -74,17 +74,17 @@
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Se déconnecter'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/logout-icon.svg"
             />
-            <a class="link text-lg" href="#">Me déconnecter</a>
+            <a class="link text-lg max-lg:text-base" href="#">Me déconnecter</a>
           </li>
         </ul>
       </nav>
       <div class="flex flex-1 flex-col gap-6">
         <div class="flex gap-6">
           <section
-            class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow"
+            class="bg-(--color-quaternary) flex flex-col gap-6 rounded-sm p-12 shadow w-fit max-xl:w-full"
           >
             <a
               class="flex items-center link text-(--color-primary) font-medium w-fit"
@@ -95,12 +95,12 @@
                 src="../../../content/icons/arrow-icon.svg"
               />Retour</a
             >
-            <h2 class="outfit-header text-(--color-primary) text-xl">
+            <h2 class="outfit-header text-(--color-primary) text-xl max-lg:text-lg">
               Éditer un utilisateur
             </h2>
             <form action="" class="flex flex-col gap-6" method="post">
-              <div class="flex gap-10">
-                <div class="flex flex-col gap-4 w-[325px]">
+              <div class="flex flex-col xl:flex-row gap-10">
+                <div class="flex flex-col gap-4 w-[325px] max-xl:w-full">
                   <div class="flex flex-col gap-2">
                     <label for="nickname">Pseudonyme</label>
                     <input
@@ -240,7 +240,7 @@
           <a href="../../general/index.html"
             ><img
               alt="Logo de l'application Rumton"
-              class="w-[100px]"
+              class="w-[100px] max-lg:w-[90px]"
               src="../../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
@@ -257,28 +257,28 @@
             <a href="https://www.instagram.com/">
               <img
                 alt="Logo de l'application Instagram"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/instagram-logo.svg"
               />
             </a>
             <a href="https://x.com/">
               <img
                 alt="Logo de l'application X"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/x-logo.svg"
               />
             </a>
             <a href="https://www.facebook.com/?locale=fr_FR">
               <img
                 alt="Logo de l'application Facebook"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/facebook-logo.svg"
               />
             </a>
             <a href="https://www.youtube.com/">
               <img
                 alt="Logo de l'application YouTube"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/youtube-logo.svg"
               />
             </a>
