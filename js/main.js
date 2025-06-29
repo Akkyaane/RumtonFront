@@ -4,42 +4,9 @@ const forgottenPasswordBtn = document.getElementById("forgotten-password-btn");
 const closeBtn = document.getElementById("close-btn");
 const popup = document.getElementById("popup");
 let content;
-
-signInBtn.addEventListener("click", () => {
-  popup.classList.remove('hide');
-  popup.querySelector("#sign-in").classList.remove('hide')
-  popup.querySelector("#sign-up").classList.add('hide')
-  popup.querySelector("#forgotten-password").classList.add('hide')
-
-});
-
-signUpBtn.addEventListener("click", () => {
-  popup.classList.remove('hide');
-  popup.querySelector("#sign-in").classList.add('hide')
-  popup.querySelector("#sign-up").classList.remove('hide')
-  popup.querySelector("#forgotten-password").classList.add('hide')
-});
-
-forgottenPasswordBtn.addEventListener("click", () => {
-  popup.classList.remove('hide');
-  popup.querySelector("#sign-in").classList.add('hide')
-  popup.querySelector("#sign-up").classList.add('hide')
-  popup.querySelector("#forgotten-password").classList.remove('hide')
-});
-
-closeBtn.addEventListener("click", () => {
-  popup.classList.add('hide');
-});
-
 const dropdownBtn = document.getElementById("dropdown-btn");
 const dropdownContent = document.getElementById("dropdown-content");
-
-dropdownBtn.addEventListener("click", () => {
-  dropdownContent.classList.toggle("hide");
-});
-
 const items = Array.from(document.querySelectorAll(".item"));
-console.log(items);
 const itemsPerPage = 12;
 let currentPage = 1;
 
@@ -67,3 +34,33 @@ function changePage(page) {
 }
 
 displayPaginatedItems(currentPage);
+
+signInBtn.addEventListener("click", () => {
+  popup.classList.remove('hide');
+  popup.querySelector("#sign-in").classList.remove('hide')
+  popup.querySelector("#sign-up").classList.add('hide')
+  popup.querySelector("#forgotten-password").classList.add('hide')
+
+});
+
+signUpBtn.addEventListener("click", () => {
+  popup.classList.remove('hide');
+  popup.querySelector("#sign-in").classList.add('hide')
+  popup.querySelector("#sign-up").classList.remove('hide')
+  popup.querySelector("#forgotten-password").classList.add('hide')
+});
+
+forgottenPasswordBtn.addEventListener("click", () => {
+  popup.classList.remove('hide');
+  popup.querySelector("#sign-in").classList.add('hide')
+  popup.querySelector("#sign-up").classList.add('hide')
+  popup.querySelector("#forgotten-password").classList.remove('hide')
+});
+
+closeBtn.addEventListener("click", () => {
+  popup.classList.add('hide');
+});
+
+dropdownBtn.addEventListener("click", () => {
+  dropdownContent.classList.toggle("hide");
+});
