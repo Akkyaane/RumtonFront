@@ -20,17 +20,58 @@
         />
       </a>
       <nav class="flex items-center">
-        <ul class="flex gap-4">
+        <ul class="flex gap-4 web-navbar">
           <li><a class="link" href="./index.html">Accueil</a></li>
           <li><a class="link" href="./runs.html">Toutes les courses</a></li>
           <li>
             <a class="link" href="./profile.html#host">Devenir organisateur</a>
           </li>
         </ul>
+        <div class="hidden mobile-navbar">
+          <div class="dropdown inline-block relative">
+            <button
+              id="dropdown-btn"
+              class="py-4 px-6 inline-flex items-center w-fit font-medium text-(--color-primary)"
+            >
+              Menu
+              <img
+                alt="Icône du bouton 'Retour'"
+                class="size-[20px] rotate-90"
+                src="../../content/icons/arrow-icon.svg"
+              />
+            </button>
+            <ul
+              class="dropdown-menu absolute pt-1 right-0 bg-(--color-senary) rounded-sm shadow-sm hide"
+              id="dropdown-content"
+            >
+              <li>
+                <a
+                  class="rounded-t hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="./index.html"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="./runs.html"
+                  >Toutes les courses</a
+                >
+              </li>
+              <li>
+                <a
+                  class="rounded-b hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="./profile.html#host"
+                  >Devenir organisateur</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
     </header>
 
-    <main class="flex flex-1 gap-6">
+    <main class="flex flex-1 gap-6 max-sm:flex-col">
       <div class="flex flex-col gap-4">
         <nav
           class="bg-(--color-quaternary) flex flex-col h-[400px] justify-between px-8 py-12 rounded-sm shadow"

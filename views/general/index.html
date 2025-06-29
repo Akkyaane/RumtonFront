@@ -19,13 +19,13 @@
           src="../../content/logos/logo.svg"
       /></a>
       <nav class="flex gap-8 items-center">
-        <ul class="flex gap-4">
+        <ul class="flex gap-4 web-navbar">
           <li><a class="link" href="#home">Accueil</a></li>
           <li><a class="link" href="#concept">Concept</a></li>
           <li><a class="link" href="#calendar">Agenda</a></li>
           <li><a class="link" href="#volunteer">Devenir bénévole</a></li>
         </ul>
-        <ul class="flex gap-4">
+        <ul class="flex gap-4 web-navbar">
           <li>
             <a
               class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary)"
@@ -42,6 +42,69 @@
             >
           </li>
         </ul>
+        <div class="hidden mobile-navbar">
+          <div class="dropdown inline-block relative">
+            <button
+              id="dropdown-btn"
+              class="py-4 px-6 inline-flex items-center w-fit font-medium text-(--color-primary)"
+            >
+              Menu
+              <img
+                alt="Icône du bouton 'Retour'"
+                class="size-[20px] rotate-90"
+                src="../../content/icons/arrow-icon.svg"
+              />
+            </button>
+            <ul
+              class="dropdown-menu absolute pt-1 right-0 bg-(--color-senary) rounded-sm shadow-sm hide"
+              id="dropdown-content"
+            >
+              <li>
+                <a
+                  class="rounded-t hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="#home"
+                  >Accueil</a
+                >
+              </li>
+              <li>
+                <a
+                  class="hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="#concept"
+                  >Concept</a
+                >
+              </li>
+              <li>
+                <a
+                  class="rounded-b hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="#calendar"
+                  >Agenda</a
+                >
+              </li>
+              <li>
+                <a
+                  class="rounded-b hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="#volunteer"
+                  >Devenir bénévole</a
+                >
+              </li>
+              <li>
+                <a
+                  class="rounded-b hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  href="./dashboard.html"
+                  id="mobile-sign-in-btn"
+                  >Se connecter</a
+                >
+              </li>
+              <li>
+                <a
+                  class="rounded-b hover:bg-gray-100 py-4 px-6 block text-nowrap"
+                  id="mobile-sign-up-btn"
+                  >S'inscrire</a
+                >
+              </li>
+            </ul>
+          </div>
+        </div>
       </nav>
       <div class="hide popup shadow-xl px-8 py-12" id="popup">
         <span class="close-btn" id="close-btn">&times;</span>
@@ -307,9 +370,9 @@
       </div>
     </header>
 
-    <main class="flex flex-col gap-8">
+    <main class="flex flex-col gap-8 max-sm:text-center">
       <section
-        class="home flex flex-col items-center gap-8 py-32 rounded-sm shadow text-(--color-senary)"
+        class="home flex flex-col items-center gap-8 py-32 rounded-sm shadow text-(--color-senary) text-center px-2"
         id="home"
       >
         <p class="text-lg max-lg:text-base">
@@ -318,12 +381,12 @@
         <h1 class="outfit-header text-3xl max-lg:text-2xl">
           Rejoignez une explosion de couleurs, de fun et d'énergie !
         </h1>
-        <p class="text-center text-lg w-2xl max-lg:text-base max-lg:w-xl">
+        <p class="text-lg w-2xl max-lg:text-base max-lg:w-xl max-sm:w-full">
           La Color Run, c'est bien plus qu'une course : c'est une fête où chaque
           kilomètre devient un arc-en-ciel de bonheur. Que vous soyez coureur
           aguerri ou amateur de bonne humeur, vous êtes au bon endroit.
         </p>
-        <div class="flex gap-4">
+        <div class="flex gap-4 max-sm:flex-col">
           <a
             class="bg-(--color-primary) border-2 border-(--color-primary) cursor-pointer hover:border-2 hover:border-(--color-senary) hover:text-(--color-senary) px-3 py-2 rounded-sm text-(--color-senary)"
             href="./runs.html"
@@ -341,7 +404,7 @@
         >
           Découvrez le concept de la Color Run
         </h2>
-        <div class="flex gap-10 items-center">
+        <div class="flex gap-10 items-center max-sm:flex-col">
           <img
             alt="Photo d'illustration de la Color Run"
             class="rounded-sm shadow w-[500px] max-lg:w-[400px]"
@@ -378,12 +441,12 @@
         >
           Nos prochaines étapes colorées
         </h2>
-        <p class="text-center text-lg w-xl max-lg:text-base max-lg:w-lg">
+        <p class="text-center text-lg w-xl max-lg:text-base max-lg:w-lg max-sm:w-full">
           La Color Run voyage dans toute la France ! Voici les villes où nous
           poserons nos valises prochainement :
         </p>
-        <div class="flex gap-10">
-          <div class="flex flex-col gap-2 items-left">
+        <div class="flex gap-10 max-sm:flex-col">
+          <div class="flex flex-col gap-2 items-left max-sm:items-center">
             <img
               alt="Photo de la ville de Lyon"
               class="rounded-sm shadow size-[300px] max-lg:size-[200px]"
@@ -396,7 +459,7 @@
               >Participer</a
             >
           </div>
-          <div class="flex flex-col gap-2 items-left">
+          <div class="flex flex-col gap-2 items-left max-sm:items-center">
             <img
               alt="Photo de la ville de Bordeaux"
               class="rounded-sm shadow size-[300px] max-lg:size-[200px]"
@@ -409,7 +472,7 @@
               >Participer</a
             >
           </div>
-          <div class="flex flex-col gap-2 items-left">
+          <div class="flex flex-col gap-2 items-left max-sm:items-center">
             <img
               alt="Photo de la ville de Paris"
               class="rounded-sm shadow size-[300px] max-lg:size-[200px]"
@@ -427,14 +490,14 @@
           >Consulter plus d'événements</a
         >
       </section>
-      <section class="flex gap-10 justify-center py-10 items-center" id="join">
+      <section class="flex gap-10 justify-center py-10 items-center max-sm:flex-col" id="join">
         <img
           alt=""
           class="rounded-sm shadow w-[500px] max-lg:w-[400px]"
           src="../../content/pictures/picture-6.webp"
         />
         <div
-          class="flex flex-col gap-3 text-lg w-3xl max-lg:text-base max-lg:w-2xl"
+          class="flex flex-col gap-3 text-lg w-3xl max-lg:text-base max-lg:w-2xl max-sm:w-full max-sm:items-center"
         >
           <h2
             class="outfit-header text-2xl text-(--color-primary) max-lg:text-xl"
@@ -468,11 +531,11 @@
         </div>
       </section>
       <section
-        class="flex gap-10 justify-center py-10 items-center"
+        class="flex gap-10 justify-center py-10 items-center max-sm:flex-col-reverse"
         id="volunteer"
       >
         <div
-          class="flex flex-col gap-3 text-lg w-3xl max-lg:text-base max-lg:w-2xl"
+          class="flex flex-col gap-3 text-lg w-3xl max-lg:text-base max-lg:w-2xl max-sm:w-full max-sm:items-center"
         >
           <h2
             class="outfit-header text-2xl text-(--color-primary) max-lg:text-xl"
@@ -511,7 +574,7 @@
     </main>
 
     <footer class="flex flex-col items-center py-10">
-      <div class="flex items-center justify-between w-full">
+      <div class="flex items-center justify-between w-full max-sm:flex-col-reverse">
         <div class="flex flex-col gap-2">
           <a href="./index.html"
             ><img
@@ -521,14 +584,14 @@
           /></a>
           <p>2025 © Rumton</p>
         </div>
-        <div class="flex gap-8 items-center">
+        <div class="flex gap-8 items-center max-sm:flex-col">
           <div class="flex flex-col gap-4">
             <nav>
               <ul class="flex flex-col gap-2">
-                <li><a class="link" href="#home">Accueil</a></li>
-                <li><a class="link" href="#concept">Concept</a></li>
-                <li><a class="link" href="#calendar">Agenda</a></li>
-                <li><a class="link" href="#volunteer">Devenir bénévole</a></li>
+                <li><a class="link" href="#">À propos</a></li>
+                <li><a class="link" href="#">FAQ</a></li>
+                <li><a class="link" href="#">Nous contacter</a></li>
+                <li><a class="link" href="#">Mentions légales</a></li>
               </ul>
             </nav>
             <div class="flex gap-2">

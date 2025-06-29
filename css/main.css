@@ -85,7 +85,22 @@ em {
 }
 
 @media (max-width: 64rem) {
-  .hidden-nickname {
+  .hidden-email {
     display: none;
+  }
+}
+
+@media (max-width: 48rem) {
+  .mobile-navbar {
+    display: block;
+    z-index: 1000;
+  }
+
+  .web-navbar {
+    display: none;
+  }
+
+  .dropdown:hover .dropdown-menu {
+    display: block;
   }
 }
