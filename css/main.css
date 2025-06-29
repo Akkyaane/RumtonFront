@@ -103,4 +103,8 @@ em {
   .dropdown:hover .dropdown-menu {
     display: block;
   }
+
+  .popup {
+    width: 100%;
+  }
 }

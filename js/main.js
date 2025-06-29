@@ -1,5 +1,7 @@
 const signInBtn = document.getElementById("sign-in-btn");
 const signUpBtn = document.getElementById("sign-up-btn");
+const mobileSignInBtn = document.getElementById("mobile-sign-in-btn");
+const mobileSignUpBtn = document.getElementById("mobile-sign-up-btn");
 const forgottenPasswordBtn = document.getElementById("forgotten-password-btn");
 const closeBtn = document.getElementById("close-btn");
 const popup = document.getElementById("popup");
@@ -12,6 +14,10 @@ let currentPage = 1;
 
 function displayPaginatedItems(page) {
   const container = document.querySelector(".items-container");
+  const pageNumber = document.getElementById("page-number");
+
+  if (!container || !pageNumber) return;
+
   container.innerHTML = "";
   const start = (page - 1) * itemsPerPage;
   const end = start + itemsPerPage;
@@ -22,9 +28,15 @@ function displayPaginatedItems(page) {
     container.appendChild(clone);
   });
 
-  document.getElementById("page-number").innerHTML = `${page} / ${Math.ceil(
-    items.length / itemsPerPage
-  )}`;
+  pageNumber.innerHTML = `${page} / ${Math.ceil(items.length / itemsPerPage)}`;
+}
+
+if (
+  items.length &&
+  document.querySelector(".items-container") &&
+  document.getElementById("page-number")
+) {
+  displayPaginatedItems(currentPage);
 }
 
 function changePage(page) {
@@ -33,34 +45,59 @@ function changePage(page) {
   displayPaginatedItems(page);
 }
 
-displayPaginatedItems(currentPage);
+if (signInBtn) {
+  signInBtn.addEventListener("click", () => {
+    popup.classList.remove("hide");
+    popup.querySelector("#sign-in").classList.remove("hide");
+    popup.querySelector("#sign-up").classList.add("hide");
+    popup.querySelector("#forgotten-password").classList.add("hide");
+  });
+}
 
-signInBtn.addEventListener("click", () => {
-  popup.classList.remove('hide');
-  popup.querySelector("#sign-in").classList.remove('hide')
-  popup.querySelector("#sign-up").classList.add('hide')
-  popup.querySelector("#forgotten-password").classList.add('hide')
+if (signUpBtn) {
+  signUpBtn.addEventListener("click", () => {
+    popup.classList.remove("hide");
+    popup.querySelector("#sign-in").classList.add("hide");
+    popup.querySelector("#sign-up").classList.remove("hide");
+    popup.querySelector("#forgotten-password").classList.add("hide");
+  });
+}
 
-});
+if (mobileSignInBtn) {
+  mobileSignInBtn.addEventListener("click", () => {
+    popup.classList.remove("hide");
+    popup.querySelector("#sign-in").classList.remove("hide");
+    popup.querySelector("#sign-up").classList.add("hide");
+    popup.querySelector("#forgotten-password").classList.add("hide");
+  });
+}
 
-signUpBtn.addEventListener("click", () => {
-  popup.classList.remove('hide');
-  popup.querySelector("#sign-in").classList.add('hide')
-  popup.querySelector("#sign-up").classList.remove('hide')
-  popup.querySelector("#forgotten-password").classList.add('hide')
-});
+if (mobileSignUpBtn) {
+  mobileSignUpBtn.addEventListener("click", () => {
+    popup.classList.remove("hide");
+    popup.querySelector("#sign-in").classList.add("hide");
+    popup.querySelector("#sign-up").classList.remove("hide");
+    popup.querySelector("#forgotten-password").classList.add("hide");
+  });
+}
 
-forgottenPasswordBtn.addEventListener("click", () => {
-  popup.classList.remove('hide');
-  popup.querySelector("#sign-in").classList.add('hide')
-  popup.querySelector("#sign-up").classList.add('hide')
-  popup.querySelector("#forgotten-password").classList.remove('hide')
-});
+if (forgottenPasswordBtn) {
+  forgottenPasswordBtn.addEventListener("click", () => {
+    popup.classList.remove("hide");
+    popup.querySelector("#sign-in").classList.add("hide");
+    popup.querySelector("#sign-up").classList.add("hide");
+    popup.querySelector("#forgotten-password").classList.remove("hide");
+  });
+}
 
-closeBtn.addEventListener("click", () => {
-  popup.classList.add('hide');
-});
+if (closeBtn) {
+  closeBtn.addEventListener("click", () => {
+    popup.classList.add("hide");
+  });
+}
 
-dropdownBtn.addEventListener("click", () => {
-  dropdownContent.classList.toggle("hide");
-});
+if (dropdownBtn) {
+  dropdownBtn.addEventListener("click", () => {
+    dropdownContent.classList.toggle("hide");
+  });
+}
