@@ -83,3 +83,9 @@ em {
   background-position: bottom;
   background-size: cover;
 }
+
+@media (max-width: 64rem) {
+  .hidden-nickname {
+    display: none;
+  }
+}

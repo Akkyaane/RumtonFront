@@ -9,13 +9,13 @@
   </head>
 
   <body
-    class="flex flex-col m-auto min-h-screen outfit-body text-(--color-secondary) w-(--size-1440)"
+    class="flex flex-col min-h-screen m-auto outfit-body text-(--color-secondary) max-w-(--size-1440) max-lg:text-sm px-4"
   >
     <header class="flex items-center justify-between py-4">
       <a href="../../general/index.html">
         <img
           alt="Logo de l'application Rumton"
-          class="w-[100px]"
+          class="w-[100px] max-lg:w-[90px]"
           src="../../../content/logos/logo.svg"
         />
       </a>
@@ -34,38 +34,38 @@
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mon tableau de bord'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/board-icon.svg"
             />
-            <a class="link text-lg" href="./administrator-dashboard.html"
+            <a class="link text-lg max-lg:text-base" href="./administrator-dashboard.html"
               >Mon tableau de bord</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Utilisateurs'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/users-icon.svg"
             />
-            <a class="link text-lg" href="./administrator-users.html"
+            <a class="link text-lg max-lg:text-base" href="./administrator-users.html"
               >Utilisateurs</a
             >
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Courses'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/flag-icon.svg"
             />
-            <a class="link text-lg" href="../../general/runs.html">Courses</a>
+            <a class="link text-lg max-lg:text-base" href="../../general/runs.html">Courses</a>
           </li>
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Mes informations'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/user-icon.svg"
             />
-            <a class="link text-lg" href="../../general/profile.html"
+            <a class="link text-lg max-lg:text-base" href="../../general/profile.html"
               >Mes informations</a
             >
           </li>
@@ -74,10 +74,10 @@
           <li class="flex items-center gap-2 text-(--color-secondary)">
             <img
               alt="Icône de la section 'Se déconnecter'"
-              class="size-[20px]"
+              class="size-[20px] max-lg:size-[15px]"
               src="../../../content/icons/logout-icon.svg"
             />
-            <a class="link text-lg" href="#">Me déconnecter</a>
+            <a class="link text-lg max-lg:text-base" href="#">Me déconnecter</a>
           </li>
         </ul>
       </nav>
@@ -85,18 +85,18 @@
         <section
           class="bg-(--color-quaternary) flex flex-1 flex-col gap-8 p-12 rounded-sm shadow"
         >
-          <h2 class="outfit-header text-(--color-primary) text-xl">
+          <h2 class="outfit-header text-(--color-primary) text-xl max-lg:text-lg">
             Toutes les utilisateurs
           </h2>
           <div class="flex flex-col items-center justify-center gap-4">
             <p>Aucun résultat.</p>
           </div>
           <div class="flex flex-col items-center justify-center gap-8">
-            <table class="bg-(--color-senary) table-fixed w-full">
+            <table class="bg-(--color-senary) table-auto w-full max-lg:text-xs">
               <thead>
                 <tr>
                   <th
-                    class="border-2 border-(--color-quinary) font-semibold p-4"
+                    class="border-2 border-(--color-quinary) font-semibold p-4 hidden-nickname"
                   >
                     Pseudo
                   </th>
@@ -121,7 +121,7 @@
                 class="border-b-2 border-(--color-quinary) text-center items-container"
               >
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     LunaSky
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -140,7 +140,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     DarkWolf
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -159,7 +159,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     Echo33
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -178,7 +178,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     PixieDust
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -197,7 +197,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     NeoByte
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -216,7 +216,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     QueenBee
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -235,7 +235,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     IronFist
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -254,7 +254,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     StellaNova
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -273,7 +273,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     ByteMaster
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -292,7 +292,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     ShadowCat
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -311,7 +311,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     FireFox
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -330,7 +330,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     CrystalCode
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -349,7 +349,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     AlphaTech
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -368,7 +368,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     MoonBlade
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -387,7 +387,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     NovaSpark
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -406,7 +406,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     CodeNinja
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -425,7 +425,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     ZenMaster
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -444,7 +444,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     BlazeStorm
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -463,7 +463,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     CyberQueen
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -482,7 +482,7 @@
                   </td>
                 </tr>
                 <tr class="item">
-                  <td class="border-x-2 border-(--color-quinary) p-4">
+                  <td class="border-x-2 border-(--color-quinary) p-4 hidden-nickname">
                     PhantomByte
                   </td>
                   <td class="border-x-2 border-(--color-quinary) p-4">
@@ -506,7 +506,7 @@
               <button onclick="changePage(currentPage - 1)">
                 <img
                   alt="Icône du bouton 'En savoir plus'"
-                  class="cursor-pointer rotate-180 size-[25px]"
+                  class="cursor-pointer rotate-180 size-[25px] max-lg:size-[20px]"
                   src="../../../content/icons/arrow-icon.svg"
                 />
               </button>
@@ -514,7 +514,7 @@
               <button onclick="changePage(currentPage + 1)">
                 <img
                   alt="Icône du bouton 'En savoir plus'"
-                  class="cursor-pointer size-[25px]"
+                  class="cursor-pointer size-[25px] max-lg:size-[20px]"
                   src="../../../content/icons/arrow-icon.svg"
                 />
               </button>
@@ -535,7 +535,7 @@
           <a href="../../general/index.html"
             ><img
               alt="Logo de l'application Rumton"
-              class="w-[100px]"
+              class="w-[100px] max-lg:w-[90px]"
               src="../../../content/logos/logo.svg"
           /></a>
           <p>2025 © Rumton</p>
@@ -552,28 +552,28 @@
             <a href="https://www.instagram.com/">
               <img
                 alt="Logo de l'application Instagram"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/instagram-logo.svg"
               />
             </a>
             <a href="https://x.com/">
               <img
                 alt="Logo de l'application X"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/x-logo.svg"
               />
             </a>
             <a href="https://www.facebook.com/?locale=fr_FR">
               <img
                 alt="Logo de l'application Facebook"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/facebook-logo.svg"
               />
             </a>
             <a href="https://www.youtube.com/">
               <img
                 alt="Logo de l'application YouTube"
-                class="size-[25px]"
+                class="size-[25px] max-lg:size-[20px]"
                 src="../../../content/logos/youtube-logo.svg"
               />
             </a>
