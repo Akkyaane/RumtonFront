@@ -28,9 +28,9 @@
           </li>
         </ul>
         <div class="hidden mobile-navbar">
-          <div class="dropdown inline-block relative">
+          <div class="menu inline-block relative">
             <button
-              id="dropdown-btn"
+              id="menu-btn"
               class="py-4 px-6 inline-flex items-center w-fit font-medium text-(--color-primary)"
             >
               Menu
@@ -41,8 +41,8 @@
               />
             </button>
             <ul
-              class="dropdown-menu absolute pt-1 right-0 bg-(--color-senary) rounded-sm shadow-sm hide"
-              id="dropdown-content"
+              class="menu-menu absolute right-0 bg-(--color-senary) rounded-sm shadow-lg hide"
+              id="menu-content"
             >
               <li>
                 <a
@@ -208,82 +208,122 @@
             >
               Toutes les courses
             </h2>
-            <div class="flex gap-4">
-              <div class="flex items-center gap-2 relative">
-                <img
-                  alt="Icône du bouton 'Trier'"
-                  class="size-[20px] max-lg:size-[15px]"
-                  src="../../content/icons/sort-icon.svg"
-                />
+            <div>
+              <div class="dropdown inline-block relative">
                 <button
-                  aria-expanded="true"
-                  aria-haspopup="true"
-                  class="text-(--color-primary)"
-                  id="toggleBtn"
+                  id="sort-btn"
+                  class="inline-flex items-center w-fit font-medium text-(--color-primary) gap-2"
                 >
+                  <img
+                    alt="Icône du bouton 'Trier'"
+                    class="size-[20px] ml-2"
+                    src="../../content/icons/sort-icon.svg"
+                  />
                   Trier
                 </button>
-                <!-- <div
-                class="absolute bg-(--color-senary) divide-gray-100 divide-y mt-2 origin-top-right right-9 ring-1 ring-black/5 rounded-sm shadow-lg text-(--color-secondary) top-9 z-10 focus:outline-hidden"
-                role="menu"
-                aria-orientation="vertical"
-                aria-labelledby="menu-button"
-                tabindex="-1"
-                id="dropdown"
-              >
-                <div class="py-1" role="none">
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-0"
-                    >Date</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-1"
-                    >Distance</a
-                  >
-                  <a
-                    href="#"
-                    class="block px-4 py-2 text-sm"
-                    role="menuitem"
-                    tabindex="-1"
-                    id="menu-item-2"
-                    >Ville</a
-                  >
-                  <form method="POST" action="#" role="none">
-                    <button
-                      type="submit"
-                      class="block w-full px-4 py-2 text-left text-sm"
-                      role="menuitem"
-                      tabindex="-1"
-                      id="menu-item-3"
-                    >
-                      Sign out
-                    </button>
-                  </form>
-                </div>
-              </div> -->
-              </div>
-              <div class="flex items-center gap-2">
-                <img
-                  alt="Icône du bouton 'Filtrer'"
-                  class="size-[20px] max-lg:size-[15px]"
-                  src="../../content/icons/filter-icon.svg"
-                />
-                <button
-                  aria-expanded="true"
-                  aria-haspopup="true"
-                  class="text-(--color-primary)"
-                  id="toggleBtn"
+                <ul
+                  class="dropdown-menu absolute right-0 bg-(--color-senary) rounded-sm shadow-lg hide z-10 w-fit mt-2"
+                  id="sort-content"
                 >
+                  <li
+                    class="rounded-t py-4 px-6 block text-nowrap font-semibold"
+                  >
+                    Ville
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">A → Z</a>
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">Z → A</a>
+                  </li>
+                  <li
+                    class="rounded-t py-4 px-6 block text-nowrap font-semibold"
+                  >
+                    Date
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">Aujourd’hui</a>
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">Prochaines</a>
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">Passées</a>
+                  </li>
+                  <li
+                    class="rounded-t py-4 px-6 block text-nowrap font-semibold"
+                  >
+                    Distance
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">- de 10 km</a>
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">10 - 30 km</a>
+                  </li>
+                  <li class="hover:bg-gray-100">
+                    <a href="#" class="py-4 px-6 block">+ 30 km</a>
+                  </li>
+                </ul>
+              </div>
+              <div class="dropdown inline-block relative">
+                <button
+                  id="filter-btn"
+                  class="inline-flex items-center w-fit font-medium text-(--color-primary) gap-2"
+                >
+                  <img
+                    alt="Icône du bouton 'Trier'"
+                    class="size-[20px] ml-2"
+                    src="../../content/icons/sort-icon.svg"
+                  />
                   Filtrer
                 </button>
+                <div
+                  class="dropdown-menu absolute right-0 bg-(--color-senary) rounded-sm shadow-lg hide z-10 text-s3 px-4 py-6 w-64 mt-2"
+                  id="filter-content"
+                >
+                  <form action="" class="flex flex-col gap-4 w-full">
+                    <div class="flex flex-col gap-2">
+                      <label class="block mb-1 font-medium">Ville</label>
+                      <input
+                        class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
+                        id="city"
+                        name="city"
+                        placeholder="Lyon"
+                        required
+                        type="text"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label class="block mb-1 font-medium text-sm">Date</label>
+                      <input
+                        class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
+                        id="date"
+                        name="date"
+                        required
+                        type="date"
+                      />
+                    </div>
+                    <div class="flex flex-col gap-2">
+                      <label for="distance" class="">Distance (km)</label>
+                      <input
+                        class="focus-visible:outline-2 focus-visible:outline-(--color-primary) outline-1 outline-(--color-quinary) p-2 rounded-sm"
+                        id="distance"
+                        name="distance"
+                        placeholder="20"
+                        required
+                        type="number"
+                      />
+                    </div>
+                    <input
+                      type="submit"
+                      name="send"
+                      id="send"
+                      value="Appliquer"
+                      class="bg-(--color-primary) border-1 border-(--color-senary) cursor-pointer hover:bg-transparent hover:border-1 hover:border-(--color-primary) hover:text-(--color-primary) px-3 py-2 rounded-sm text-(--color-senary) w-full"
+                    />
+                  </form>
+                </div>
               </div>
             </div>
           </div>
@@ -1379,39 +1419,6 @@
         </div>
       </div>
     </footer>
-    <!-- <style>
-      .show {
-        opacity: 1;
-        transform: scale(1);
-        pointer-events: auto;
-        transition: opacity 100ms ease-out, transform 100ms ease-out;
-      }
-
-      .hide {
-        opacity: 0;
-        transform: scale(0.95);
-        pointer-events: none;
-        transition: opacity 75ms ease-in, transform 75ms ease-in;
-      }
-    </style>
-
-    <script>
-      const dropdown = document.getElementById("dropdown");
-      const toggleBtn = document.getElementById("toggleBtn");
-      let isOpen = false;
-
-      toggleBtn.addEventListener("click", () => {
-        isOpen = !isOpen;
-
-        if (isOpen) {
-          dropdown.classList.remove("hide");
-          dropdown.classList.add("show");
-        } else {
-          dropdown.classList.remove("show");
-          dropdown.classList.add("hide");
-        }
-      });
-    </script> -->
     <script src="../../js/main.js"></script>
   </body>
 </html>

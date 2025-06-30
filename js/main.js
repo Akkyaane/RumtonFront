@@ -5,9 +5,16 @@ const mobileSignUpBtn = document.getElementById("mobile-sign-up-btn");
 const forgottenPasswordBtn = document.getElementById("forgotten-password-btn");
 const closeBtn = document.getElementById("close-btn");
 const popup = document.getElementById("popup");
-let content;
-const dropdownBtn = document.getElementById("dropdown-btn");
-const dropdownContent = document.getElementById("dropdown-content");
+
+const menuBtn = document.getElementById("menu-btn");
+const menuContent = document.getElementById("menu-content");
+
+const sortBtn = document.getElementById("sort-btn");
+const sortContent = document.getElementById("sort-content");
+
+const filterBtn = document.getElementById("filter-btn");
+const filterContent = document.getElementById("filter-content");
+
 const items = Array.from(document.querySelectorAll(".item"));
 const itemsPerPage = 12;
 let currentPage = 1;
@@ -24,11 +31,10 @@ function displayPaginatedItems(page) {
   const paginatedItems = items.slice(start, end);
 
   paginatedItems.forEach((item) => {
-    const clone = item.cloneNode(true);
-    container.appendChild(clone);
+    container.appendChild(item.cloneNode(true));
   });
 
-  pageNumber.innerHTML = `${page} / ${Math.ceil(items.length / itemsPerPage)}`;
+  pageNumber.innerText = `${page} / ${Math.ceil(items.length / itemsPerPage)}`;
 }
 
 if (
@@ -45,59 +51,52 @@ function changePage(page) {
   displayPaginatedItems(page);
 }
 
-if (signInBtn) {
-  signInBtn.addEventListener("click", () => {
+function displayAuthenticationPopup(button) {
+  if (!button) return;
+
+  button.addEventListener("click", () => {
     popup.classList.remove("hide");
-    popup.querySelector("#sign-in").classList.remove("hide");
-    popup.querySelector("#sign-up").classList.add("hide");
-    popup.querySelector("#forgotten-password").classList.add("hide");
+
+    popup.querySelector("#sign-in")?.classList.add("hide");
+    popup.querySelector("#sign-up")?.classList.add("hide");
+    popup.querySelector("#forgotten-password")?.classList.add("hide");
+
+    if (button === signInBtn || button === mobileSignInBtn) {
+      popup.querySelector("#sign-in")?.classList.remove("hide");
+    } else if (button === signUpBtn || button === mobileSignUpBtn) {
+      popup.querySelector("#sign-up")?.classList.remove("hide");
+    } else if (button === forgottenPasswordBtn) {
+      popup.querySelector("#forgotten-password")?.classList.remove("hide");
+    } else if (button === closeBtn) {
+      popup.classList.add("hide");
+    }
   });
 }
 
-if (signUpBtn) {
-  signUpBtn.addEventListener("click", () => {
-    popup.classList.remove("hide");
-    popup.querySelector("#sign-in").classList.add("hide");
-    popup.querySelector("#sign-up").classList.remove("hide");
-    popup.querySelector("#forgotten-password").classList.add("hide");
+function displayPopup(button, content) {
+  if (!button || !content) return;
+
+  button.addEventListener("click", () => {
+    sortContent.classList.add("hide");
+    filterContent.classList.add("hide");
+
+    if (button === sortBtn) {
+      content.classList.toggle("hide");
+    } else if (button === filterBtn) {
+      content.classList.toggle("hide");
+    }
   });
 }
 
-if (mobileSignInBtn) {
-  mobileSignInBtn.addEventListener("click", () => {
-    popup.classList.remove("hide");
-    popup.querySelector("#sign-in").classList.remove("hide");
-    popup.querySelector("#sign-up").classList.add("hide");
-    popup.querySelector("#forgotten-password").classList.add("hide");
-  });
-}
+[
+  signInBtn,
+  mobileSignInBtn,
+  signUpBtn,
+  mobileSignUpBtn,
+  forgottenPasswordBtn,
+  closeBtn,
+].forEach(displayAuthenticationPopup);
 
-if (mobileSignUpBtn) {
-  mobileSignUpBtn.addEventListener("click", () => {
-    popup.classList.remove("hide");
-    popup.querySelector("#sign-in").classList.add("hide");
-    popup.querySelector("#sign-up").classList.remove("hide");
-    popup.querySelector("#forgotten-password").classList.add("hide");
-  });
-}
-
-if (forgottenPasswordBtn) {
-  forgottenPasswordBtn.addEventListener("click", () => {
-    popup.classList.remove("hide");
-    popup.querySelector("#sign-in").classList.add("hide");
-    popup.querySelector("#sign-up").classList.add("hide");
-    popup.querySelector("#forgotten-password").classList.remove("hide");
-  });
-}
-
-if (closeBtn) {
-  closeBtn.addEventListener("click", () => {
-    popup.classList.add("hide");
-  });
-}
-
-if (dropdownBtn) {
-  dropdownBtn.addEventListener("click", () => {
-    dropdownContent.classList.toggle("hide");
-  });
-}
+displayPopup(menuBtn, menuContent);
+displayPopup(sortBtn, sortContent);
+displayPopup(filterBtn, filterContent);

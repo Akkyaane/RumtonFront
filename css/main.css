@@ -100,7 +100,7 @@ em {
     display: none;
   }
 
-  .dropdown:hover .dropdown-menu {
+  .menu:hover .menu-content {
     display: block;
   }
 
