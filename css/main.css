@@ -55,7 +55,7 @@
   overflow-y: auto;
 
   .close-btn {
-    color: var(--color-1accef);
+    color: var(--color-primary);
     cursor: pointer;
     font-size: 60px;
     position: absolute;
@@ -79,7 +79,7 @@ em {
 }
 
 .home {
-  background-image: url(../../content/pictures/picture-1.webp);
+  background-image: url(../content/pictures/picture-1.webp);
   background-position: bottom;
   background-size: cover;
 }
@@ -107,4 +107,9 @@ em {
   .popup {
     width: 100%;
   }
+}
+
+.discussion-scrollbar {
+    -ms-overflow-style: none;
+    scrollbar-width: none;
 }

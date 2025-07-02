@@ -1,5 +1,5 @@
 const signInBtn = document.getElementById("sign-in-btn");
-const signUpBtn = document.getElementById("sign-up-btn");
+const signUpBtns = document.querySelectorAll(".sign-up-btn");
 const mobileSignInBtn = document.getElementById("mobile-sign-in-btn");
 const mobileSignUpBtn = document.getElementById("mobile-sign-up-btn");
 const forgottenPasswordBtn = document.getElementById("forgotten-password-btn");
@@ -51,11 +51,10 @@ function changePage(page) {
   displayPaginatedItems(page);
 }
 
-function displayAuthenticationPopup(button) {
-  if (!button) return;
-
+function displayAuthenticationPopup(button, buttons) {
+  if (button && !buttons) {
   button.addEventListener("click", () => {
-    popup.classList.remove("hide");
+    popup.classList.toggle("hide");
 
     popup.querySelector("#sign-in")?.classList.add("hide");
     popup.querySelector("#sign-up")?.classList.add("hide");
@@ -63,7 +62,7 @@ function displayAuthenticationPopup(button) {
 
     if (button === signInBtn || button === mobileSignInBtn) {
       popup.querySelector("#sign-in")?.classList.remove("hide");
-    } else if (button === signUpBtn || button === mobileSignUpBtn) {
+    } else if (button === mobileSignUpBtn) {
       popup.querySelector("#sign-up")?.classList.remove("hide");
     } else if (button === forgottenPasswordBtn) {
       popup.querySelector("#forgotten-password")?.classList.remove("hide");
@@ -71,19 +70,30 @@ function displayAuthenticationPopup(button) {
       popup.classList.add("hide");
     }
   });
+  }
+
+  if (!button && buttons) {
+    buttons.forEach(btn => {
+      btn.addEventListener("click", () => {
+        popup.classList.toggle("hide");
+        popup.querySelector("#sign-in")?.classList.add("hide");
+        popup.querySelector("#forgotten-password")?.classList.add("hide");
+        popup.querySelector("#sign-up")?.classList.remove("hide");
+      });
+    });
+  }
 }
 
 function displayPopup(button, content) {
   if (!button || !content) return;
 
   button.addEventListener("click", () => {
-    sortContent.classList.add("hide");
-    filterContent.classList.add("hide");
-
     if (button === sortBtn) {
       content.classList.toggle("hide");
+      filterContent.classList.add("hide");
     } else if (button === filterBtn) {
       content.classList.toggle("hide");
+      sortContent.classList.add("hide");
     }
   });
 }
@@ -91,11 +101,12 @@ function displayPopup(button, content) {
 [
   signInBtn,
   mobileSignInBtn,
-  signUpBtn,
   mobileSignUpBtn,
   forgottenPasswordBtn,
   closeBtn,
-].forEach(displayAuthenticationPopup);
+].forEach(button => displayAuthenticationPopup(button, null));
+
+displayAuthenticationPopup(null, signUpBtns)
 
 displayPopup(menuBtn, menuContent);
 displayPopup(sortBtn, sortContent);

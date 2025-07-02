@@ -352,11 +352,21 @@
               >
                 <div class="flex flex-col gap-4">
                   <div class="flex flex-col gap-2">
-                    <label for="password">Mot de passe</label>
+                    <label for="actual-password">Mot de passe actuel</label>
                     <input
                       class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
-                      id="password"
-                      name="password"
+                      id="actual-password"
+                      name="actual-password"
+                      type="password"
+                      value=""
+                    />
+                  </div>
+                  <div class="flex flex-col gap-2">
+                    <label for="new-password">Nouveau mot de passe</label>
+                    <input
+                      class="bg-(--color-senary) rounded-sm p-2 outline-1 outline-(--color-quinary) focus-visible:outline-2 focus-visible:outline-(--color-primary)"
+                      id="new-password"
+                      name="new-password"
                       type="password"
                       value=""
                     />
